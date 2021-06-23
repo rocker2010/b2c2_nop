@@ -1,0 +1,495 @@
+html,
+body {
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	background: #fff;
+	font-size: 625%;
+	color: #212121;
+	font-family: myfont, "Microsoft Yahei", "微软雅黑", Arial, Helvetica, sans-serif;
+	/*100 ÷ 16 × 100% = 625%*/
+}
+
+body {
+	padding-bottom: 0.2rem;
+}
+
+ul,
+li,
+ol,
+p {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: normal;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	margin: 0.25rem 0.2rem;
+	margin-bottom: 0.62rem;
+	padding: 0.2rem;
+	border-radius: 0.1rem;
+	background: url("../img/ios/juxing@2x.png") 0 0 #269bef;
+	color: #fff;
+	position: relative;
+	background-size: 100%;
+}
+
+.rightIco {
+	position: absolute;
+	width: 0.9rem;
+	top: 0.4rem;
+	right: 0.3rem;
+	z-index: 0;
+}
+
+.mtb {
+	margin: 0.06rem 0 0.06rem 0;
+}
+
+.box {
+	padding: 0.15rem;
+	margin-bottom: 0.15rem;
+}
+
+.Wbox {
+	margin: 0 0.2rem 0 0.2rem;
+	padding: 20px;
+	background: #f6f8ff;
+	border-top: 1px #efefef solid;
+	border-bottom: 1px #efefef solid;
+}
+
+.f30 {
+	font-size: 0.20rem !important;
+}
+
+.f24 {
+	font-size: 0.16rem !important;
+}
+
+.f22 {
+	font-size: 0.14rem !important;
+}
+
+.address {
+	position: relative;
+	padding-left: 0.4rem;
+	color: #269bef;
+	margin-bottom: 0.2rem;
+	min-height: 0.5rem;
+	font-size: 0.18rem;
+}
+
+.address:before {
+	content: "";
+	position: absolute;
+	top: -0.06rem;
+	left: -0.12rem;
+	background: url(../img/ios/duihao@3x.png) no-repeat 0 0;
+	background-size: 0.43rem;
+	width: 0.43rem;
+	height: 0.43rem;
+	z-index: 1;
+}
+
+.address:after {
+	content: "";
+	border-left: 0.02rem #ccc dotted;
+	height: 1rem;
+	position: absolute;
+	top: 0.05rem;
+	left: 0.08rem;
+	z-index: 0;
+}
+
+.wuliuxinxi {}
+
+.wuliuxinxi .dot {
+	display: inline-block;
+	background: url(../img/ios/yuandian@3x.png) no-repeat;
+	width: 0.19rem;
+	height: 0.19rem;
+	background-size: 0.19rem;
+	position: absolute;
+	left: 0;
+	top: 0.02rem;
+	z-index: 1;
+}
+
+.wuliuxinxi .dot.active {
+	background: url(../img/ios/tuoyuan@3x.png) no-repeat;
+	background-size: 0.36rem;
+	width: 0.36rem;
+	height: 0.36rem;
+	left: -0.09rem;
+	top: -0.03rem;
+}
+
+.wuliuxinxi li {
+	padding-left: 0.4rem;
+	position: relative;
+	margin-bottom: 0.2rem;
+}
+
+.wuliuxinxi li:after {
+	content: "";
+	width: 0.02rem;
+	height: 0.86rem;
+	background: #c3c3c3;
+	position: absolute;
+	top: 0.05rem;
+	left: 0.08rem;
+	z-index: 0;
+}
+
+.wuliuxinxi li:last-child:after {
+	background: url(images/line_trans@3x.png) no-repeat;
+	background-size: 0.03rem;
+}
+
+.wuliuxinxi h3 {
+	font-size: 0.16rem;
+	font-weight: bold;
+}
+
+.wuliuxinxi p {
+	font-size: 0.14rem;
+	margin-top: 0.04rem;
+	color: #757575;
+}
+
+li.tooltip.wuliu:after {
+	display: block;
+	background: none;
+	border-radius: 0.05rem;
+	bottom: 0.6rem;
+	color: #757575;
+	content: attr(title);
+	left: 27%;
+	padding: 0.05rem;
+	position: absolute;
+	z-index: 98;
+	width: 40%;
+	height: 0.2ren;
+	line-height: 0.2rem;
+	*/
+	/*content: attr(title);*/
+}
+
+li.tooltip.wuliu:before {
+	border: solid;
+	border-color: rgba(224, 224, 224, 0) transparent;
+	border-width: 0.06rem 0.06rem 0 0.06rem;
+	bottom: 0.44rem;
+	content: "";
+	left: 48%;
+	position: absolute;
+	z-index: 99;
+}
+
+li.tooltip.wuliu.completed:after {
+	background: #4cac26;
+	color: #fff;
+}
+
+li.tooltip.wuliu.completed:before {
+	border-color: #4cac26 transparent;
+}
+
+li.tooltip:before {
+	border: solid;
+	border-color: #269bef transparent;
+	border-width: 0.06rem 0.06rem 0 0.06rem;
+	top: -0.1rem;
+	content: "";
+	left: 46%;
+	position: absolute;
+	z-index: 99;
+}
+
+li.tooltip:after {
+	display: block;
+	background: #269bef;
+	border-radius: 0.05rem;
+	top: -0.4rem;
+	color: #fff;
+	content: attr(title);
+	left: 27%;
+	padding: 0.05rem;
+	position: absolute;
+	z-index: 98;
+	width: 40%;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	/* content: attr(title); */
+}
+
+.flexer,
+.progress-indicator {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex
+}
+
+.no-flexer,
+.progress-indicator.stacked {
+	display: block
+}
+
+.no-flexer-element {
+	-ms-flex: 0;
+	-webkit-flex: 0;
+	-moz-flex: 0;
+	flex: 0
+}
+
+.flexer-element,
+.progress-indicator>li {
+	-ms-flex: 1;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	flex: 1
+}
+
+.progress-indicator {
+	/* margin: 0 0 1em; */
+	/* padding: 0; */
+	/* font-size: 80%; */
+	text-transform: uppercase;
+}
+
+.progress-indicator>li {
+	list-style: none;
+	text-align: center;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	text-overflow: ellipsis;
+	color: #212121;
+	display: block;
+	font-size: 0.16rem;
+	opacity: 1;
+}
+
+.progress-indicator>li:hover {
+	color: #6f6f6f
+}
+
+.progress-indicator>li.completed,
+.progress-indicator>li.completed .bubble {
+	color: #269bef;
+}
+
+.progress-indicator>li .bubble {
+	border-radius: 50%;
+	width: 0.2rem;
+	height: 0.2rem;
+	background-color: #cecece;
+	display: block;
+	margin: 0 auto .5em;
+}
+
+.progress-indicator>li .bubble:after,
+.progress-indicator>li .bubble:before {
+	display: block;
+	position: absolute;
+	top: 0.09rem;
+	width: 100%;
+	height: 0.03rem;
+	content: '';
+	background-color: #cecece
+}
+
+.progress-indicator>li.completed .bubble,
+.progress-indicator>li.completed .bubble:after,
+.progress-indicator>li.completed .bubble:before {
+	background-color: #269bef;
+	border-color: #269bef;
+}
+
+.progress-indicator>li .bubble:before {
+	left: 0
+}
+
+.progress-indicator>li .bubble:after {
+	right: 0
+}
+
+.progress-indicator>li:first-child .bubble:after,
+.progress-indicator>li:first-child .bubble:before {
+	width: 50%;
+	margin-left: 50%
+}
+
+.progress-indicator>li:last-child .bubble:after,
+.progress-indicator>li:last-child .bubble:before {
+	width: 50%;
+	margin-right: 50%
+}
+
+.progress-indicator>li.active,
+.progress-indicator>li.active .bubble {
+	color: #337AB7
+}
+
+.progress-indicator>li.active .bubble,
+.progress-indicator>li.active .bubble:after,
+.progress-indicator>li.active .bubble:before {
+	background-color: #337AB7;
+	border-color: #122a3f
+}
+
+.progress-indicator>li a:hover .bubble,
+.progress-indicator>li a:hover .bubble:after,
+.progress-indicator>li a:hover .bubble:before {
+	background-color: #5671d0;
+	border-color: #1f306e
+}
+
+.progress-indicator>li a:hover .bubble {
+	color: #5671d0
+}
+
+.progress-indicator>li.danger .bubble,
+.progress-indicator>li.danger .bubble:after,
+.progress-indicator>li.danger .bubble:before {
+	background-color: #d3140f;
+	border-color: #440605
+}
+
+.progress-indicator>li.danger .bubble {
+	color: #d3140f
+}
+
+.progress-indicator>li.warning .bubble,
+.progress-indicator>li.warning .bubble:after,
+.progress-indicator>li.warning .bubble:before {
+	background-color: #edb10a;
+	border-color: #5a4304
+}
+
+.progress-indicator>li.warning .bubble {
+	color: #edb10a
+}
+
+.progress-indicator>li.info .bubble,
+.progress-indicator>li.info .bubble:after,
+.progress-indicator>li.info .bubble:before {
+	background-color: #5b32d6;
+	border-color: #25135d
+}
+
+.progress-indicator>li.info .bubble {
+	color: #5b32d6
+}
+
+.progress-indicator.stacked>li {
+	text-indent: -0.1rem;
+	text-align: center;
+	display: block
+}
+
+.progress-indicator.stacked>li .bubble:after,
+.progress-indicator.stacked>li .bubble:before {
+	left: 50%;
+	margin-left: -1.5px;
+	width: 3px;
+	height: 100%
+}
+
+.progress-indicator.stacked .stacked-text {
+	position: relative;
+	z-index: 10;
+	top: 0;
+	margin-left: 60% !important;
+	width: 45% !important;
+	display: inline-block;
+	text-align: left;
+	line-height: 1.2em
+}
+
+.progress-indicator.stacked>li a {
+	border: none
+}
+
+.progress-indicator.stacked.nocenter>li .bubble {
+	margin-left: 0;
+	margin-right: 0
+}
+
+.progress-indicator.stacked.nocenter>li .bubble:after,
+.progress-indicator.stacked.nocenter>li .bubble:before {
+	left: 10px
+}
+
+.progress-indicator.stacked.nocenter .stacked-text {
+	width: auto !important;
+	display: block;
+	margin-left: 40px !important
+}
+
+@media handheld,
+screen and (max-width: 400px) {
+	.progress-indicator {
+		/* font-size:30% */
+	}
+}
+
+
+@media (max-width: 1024px) {
+
+	html,
+	body {
+		font-size: 760%;
+	}
+}
+
+@media (max-width: 768px) {
+
+	html,
+	body {
+		font-size: 676%;
+	}
+}
+
+@media (max-width: 470px) {
+	html,
+	body {
+		font-size: 672%;
+	}
+}
+
+@media (max-width: 425px) {
+	html,
+	body {
+		font-size: 580%;
+	}
+}
+
+@media (max-width: 375px) {
+	html,
+	body {
+		font-size: 540%
+	}
+}
+
+@media (max-width: 320px) {
+	html,
+	body {
+		font-size: 482%;
+	}
+}

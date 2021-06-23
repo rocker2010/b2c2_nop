@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*--------------------wizard_css-------------------------------*/
+.container_wizard{
+width: 100%;
+margin: 3em auto;
+z-index:1000;
+}
+
+code {
+
+background-color: #f1f1f1;
+font-size: 70%;
+padding: 4px 8px;
+border-radius: 4px;
+border: 1px solid #ccc;
+}
+.subdued {
+font-size: 80%;
+opacity: 0.6;
+}
+
+/* A totally custom override */
+
+.progress-indicator.custom-complex {
+background-color: #f1f1f1;
+padding: 10px 5px;
+border: 1px solid #ddd;
+border-radius: 10px;
+}
+.progress-indicator.custom-complex > li .bubble {
+height: 12px;
+width: 99%;
+border-radius: 2px;
+box-shadow: inset -5px 0 12px rgba(0, 0, 0, 0.2);
+}
+.progress-indicator.custom-complex > li .bubble:before,
+.progress-indicator.custom-complex > li .bubble:after {
+display: none;
+}
+
+/* Demo for vertical bars */
+
+
+li.tooltip{
+display: inline ;
+position: relative ;
+padding:0  ;
+width:10px ;
+margin:0 auto;
+
+}
+li.tooltip:hover:after{
+display:block;
+background: #333;
+background: rgba(224,224,224,.8);
+border-radius: 5px;
+bottom: 60px;
+color: #666;
+content: attr(title);
+left: 30%;
+padding: 5px ;
+position: absolute;
+z-index: 98;
+width:40%;
+height:20px;
+line-height:10px;
+
+/*content: attr(title);*/
+}
+
+li.tooltip:hover:before{
+border: solid;
+border-color:rgba(224,224,224,.8) transparent;
+border-width: 6px 6px 0 6px;
+bottom: 56px;
+content: "";
+left: 46%;
+position: absolute;
+z-index: 99;
+
+}
+
+/* Demo for Timeline vertical bars */
+
+
+@media handheld, screen and (max-width: 400px) {
+.container_wizard {
+margin: 3em auto;
+width: 100%;
+}
+li.tooltip:hover:after{
+
+left: -10%;
+width:60px;
+height:20px;
+
+
+/*content: attr(title);*/
+}
+li.tooltip:hover:before{
+
+left: 36%;
+position: absolute;
+
+
+}
+}
+/*--------------------wizard-css_end

@@ -1,0 +1,383 @@
+/* ------------------------------------------------ */
+.text-right{
+	text-align: right;
+}
+.header {
+	width: 1200px;
+	margin: auto;
+}
+
+.header-logo a img {
+	width: 100%;
+	max-width: 118px;
+	opacity: 1;
+}
+
+.header-selectors-wrapper {
+	float: left;
+	border: none;
+	padding: 0;
+}
+
+.header-selectors-wrapper>div {
+	width: auto;
+	min-width: 100px;
+	margin: 0 5px 0 0;
+	line-height: 43px;
+}
+
+.header-selectors-wrapper select {
+	height: 25px;
+	padding: 2px;
+	font-size: 12px;
+	line-height: 20px;
+	width: 100%;
+}
+
+.payPageH {
+	background: #fff;
+}
+
+.payPageH .header {
+	overflow: hidden;
+}
+
+.payPageH .header .header-upper {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.payPageH .header .header-lower {
+	margin-bottom: 12px;
+	display: table;
+	width: 100%;
+	padding: 0 0 10px 0;
+}
+
+.payPageH .header .header-lower .header-logo a {
+	vertical-align: bottom;
+	display: inline-block;
+	line-height: 0;
+	float: left;
+}
+
+.payPageH .header .header-lower .header-logo .logoItem {
+	border-left: 2px #ccc solid;
+	font-size: 23px;
+	line-height: 40px;
+	display: inline-block;
+	vertical-align: bottom;
+	padding-left: 15px;
+	margin-left: 10px;
+	color: #333;
+	height: 32px;
+}
+
+.payPageH .header .header-lower .header-logo .logoUser {
+	float: right;
+	font-size: 18px;
+	margin-top: 6px;
+}
+
+.payPageH .header .header-lower .header-logo .logoUser img {
+	width: 20px;
+	vertical-align: text-bottom;
+	margin-right: 5px;
+}
+
+.payPageC {
+	background: #fff;
+	border: 1px #ececec solid;
+	width: 1200px;
+	margin: 50px auto 30px auto;
+	padding: 26px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.payPageC .payTitle {
+	font-weight: bold;
+	color: #212121;
+	font-size: 24px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	margin-top: 0;
+}
+
+.payPageC .payTitle span {
+	color: #212121;
+	font-weight: normal;
+	float: right;
+	font-size: 16px;
+}
+
+.payPageC .payTitle span b {
+	color: #f15626;
+	font-size: 24px;
+	margin-right: 5px;
+}
+.payPageC .payPageCfoot{
+	border-top: 1px #e0e0e0 solid;
+	    margin-top: 15px;
+	    padding-top: 15px;
+}
+.text-orange {
+	color: #f15626;
+}
+
+.payCont {
+	padding: 20px 0;
+}
+
+.payPageC .payNote {
+	font-size: 15px;
+	overflow: hidden;
+	position: relative;
+}
+
+.payPageC .payNote p {
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.payCont .PayLeft {
+	width: 90px;
+	position: absolute;
+	top: 34px;
+	left: 48px;
+}
+
+.payCont .PayLeft i {
+	font-size: 90px;
+	color: #4cac26;
+}
+
+.payCont .PayRight {
+	padding-left: 148px;
+	color: #888;
+}
+
+.payOrderBtn {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 25px 0;
+	position: absolute;
+	color: #005580;
+	top: 0;
+	right: 0;
+	text-decoration: none;
+}
+
+.payOrderBtn i {
+	position: absolute;
+	right: 0;
+	top: 6px;
+	font-size: 19px;
+	-webkit-transition: -webkit-transform 0.2s linear;
+	transition: transform 0.2s linear;
+}
+
+.payOrderBtn i.close {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	
+}
+
+.payOrderList {
+	border-top: 1px #e0e0e0 solid;
+	padding: 20px 0 0;
+	font-size: 16px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.payOrderList li {
+	list-style: none;
+}
+
+.payOrderList li label {
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+
+.payOrderList li div {
+	display: inline-block;
+	color: #333;
+	vertical-align: top;
+}
+
+.payOrderList li div p {
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+.payNowBtn {
+	background: #4cac26;
+	border: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	color: #fff;
+}
+
+.payNowBtn:hover {
+	background: #47a222;
+}
+
+.payStyle {
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.payStyle .payStyleList {
+	margin: 0 0 0 -14px;
+	padding: 0;
+	overflow: hidden;
+}
+
+.payStyle h4 {
+	font-size: 16px;
+	color: #616161;
+	font-weight: bold;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+
+.payStyle .payStyleList li {
+	float: left;
+	width: 174px;
+	height: 60px;
+	line-height: 60px;
+	margin-left: 14px;
+	margin-bottom: 14px;
+	border: 1px solid #e0e0e0;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+	_zoom: 1;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.payStyle .payStyleList li img {
+	cursor: pointer;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.payStyle .payStyleList li:hover {
+	border-color: #ff6700
+}
+
+.payStyleLast {
+	margin-bottom: 0;
+}
+
+.cashTitle {
+	font-size: 18px;
+	border-bottom: 1px #e0e0e0 solid;
+	padding-bottom: 15px;
+	color: #888;
+	margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+
+	.header,
+	.payPageC {
+		width: 100%;
+	}
+
+	.payOrderBtn {
+		bottom: 0;
+		top: inherit;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.header,
+	.payPageC {
+		width: 100%;
+	}
+
+	.payPageC {
+		margin-top: 30px;
+	}
+
+	.payPageC .payTitle span {
+		display: block;
+		float: none;
+		margin-top: 10px;
+	}
+
+	.payOrderList li div {
+		width: 420px;
+	}
+
+	.payOrderBtn {
+		bottom: 0;
+		top: inherit;
+	}
+}
+
+@media (max-width: 481px) {
+	.logoUser span {
+		display: none;
+	}
+
+	.payPageC {
+		margin: 10px auto 10px auto;
+		width: 100%;
+		padding: 20px;
+	}
+
+	.payCont {
+		padding: 0;
+	}
+
+	.payCont .PayLeft {
+		top: 35px;
+		left: 50%;
+		margin-left: -45px;
+	}
+
+	.payCont .PayRight {
+		padding-left: 0;
+		padding-top: 110px;
+	}
+
+	.payPageC .payTitle {
+		font-size: 18px;
+	}
+
+	.payOrderList li label {
+		text-align: left;
+		margin-bottom: 2px;
+	}
+
+	.payOrderList li div {
+		width: 100%;
+	}
+
+	.payPageC .payTitle span {
+		display: block;
+		float: none;
+		margin-top: 10px;
+	}
+
+	.payPageC .payNote {
+		padding-bottom: 30px;
+	}
+
+	.payStyle .payStyleList li {
+		width: 145px;
+	}
+	.payCont .PayLeft i{
+		font-size: 70px;
+	}
+}
