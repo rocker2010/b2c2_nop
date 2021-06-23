@@ -1,0 +1,2235 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+		<link href="Content/css/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/iconfont.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
+		<!-- BEGIN PAGE LEVEL STYLES -->
+		<link rel="stylesheet" type="text/css" href="Content/css/global/plugins/select2/select2.css" />
+		<link rel="stylesheet" type="text/css" href="Content/css/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="Content/css/global/plugins/uniform/css/uniform.default.css" />
+		<!-- END PAGE LEVEL STYLES -->
+		<link href="Content/css/global/css/components-rounded.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/global/css/plugins.css" rel="stylesheet" type="text/css" />
+		<link href="Content/css/dashboard/layout4/css/layout.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/dashboard/layout4/css/themes/light.css" rel="stylesheet" type="text/css">
+
+		<link href="Content/css/styles.css" rel="stylesheet" type="text/css">
+		<script src="scripts/jquery-1.10.2.min.js"></script>
+		<!--<script src="Scripts/bootstrap.min.js" type="text/javascript"></script>-->
+		<script type="text/javascript" src="http://lib.sinaapp.com/js/bootstrap/v3.0.0/js/bootstrap.min.js">
+		</script>
+		<title>Autoship Preview</title>
+	</head>
+
+	<body>
+		<div id="peisong">
+			<div class="box">
+				<div>
+					<a href="javascript:" class="closed"></a>
+				</div>
+				<div class="login-page">
+					<p class="title"><b>Delivery：</b> Please select address </p>
+					<div class="selBtn">
+						<span> Country：</span>
+						<select name="product_attribute_10" id="select_country" class="valid">
+							<option selected="selected" value="1">United States</option>
+							<option value="35">Germany</option>
+							<option value="40">Hungary</option>
+							<option value="72">Spain</option>
+						</select>
+					</div>
+					<div class="selBtn">
+						<span>Province： </span>
+						<select name="product_attribute_10" id="select_province" class="valid">
+							<option selected="selected" value="2">AE (Armed Forces Europe)</option>
+							<option value="3">Alabama</option>
+							<option value="4">Alaska</option>
+							<option value="5">American Samoa</option>
+							<option value="6">AP (Armed Forces Pacific)</option>
+							<option value="8">Arkansas</option>
+							<option value="9">California</option>
+							<option value="11">Connecticut</option>
+							<option value="12">Delaware</option>
+							<option value="13">District of Columbia</option>
+							<option value="14">Federated States of Micronesia</option>
+							<option value="15">Florida</option>
+							<option value="16">Georgia</option>
+							<option value="17">Guam</option>
+							<option value="18">Hawaii</option>
+							<option value="19">Idaho</option>
+							<option value="20">Illinois</option>
+							<option value="21">Indiana</option>
+							<option value="22">Iowa</option>
+							<option value="23">Kansas</option>
+							<option value="24">Kentucky</option>
+							<option value="25">Louisiana</option>
+							<option value="26">Maine</option>
+							<option value="27">Marshall Islands</option>
+							<option value="28">Maryland</option>
+							<option value="29">Massachusetts</option>
+							<option value="30">Michigan</option>
+							<option value="31">Minnesota</option>
+							<option value="32">Mississippi</option>
+							<option value="33">Missouri</option>
+							<option value="34">Montana</option>
+							<option value="35">Nebraska</option>
+							<option value="36">Nevada</option>
+							<option value="37">New Hampshire</option>
+							<option value="38">New Jersey</option>
+							<option value="39">New Mexico</option>
+							<option value="40">New York</option>
+							<option value="41">North Carolina</option>
+							<option value="42">North Dakota</option>
+							<option value="43">Northern Mariana Islands</option>
+							<option value="44">Ohio</option>
+							<option value="45">Oklahoma</option>
+							<option value="46">Oregon</option>
+							<option value="47">Palau</option>
+							<option value="48">Pennsylvania</option>
+							<option value="49">Puerto Rico</option>
+							<option value="50">Rhode Island</option>
+							<option value="51">South Carolina</option>
+							<option value="52">South Dakota</option>
+							<option value="53">Tennessee</option>
+							<option value="54">Texas</option>
+							<option value="55">Utah</option>
+							<option value="56">Vermont</option>
+							<option value="57">Virgin Islands</option>
+							<option value="58">Virginia</option>
+							<option value="59">Washington</option>
+							<option value="60">West Virginia</option>
+							<option value="61">Wisconsin</option>
+							<option value="62">Wyoming</option>
+						</select>
+					</div>
+					<div class="selBtn">
+						<span>City：</span>
+						<select name="product_attribute_10" id="select_city" class="valid">
+							<option selected="selected" value="1630">This is a test for a long name city</option>
+							<option value="368">mxd</option>
+						</select>
+					</div>
+					<div style="clear:both"></div>
+					<div class="buttons" style="text-align: center;margin-top: 20px;margin-bottom: 15px;">
+						<input type="button" id="btn_SaveCityId" class="button-1 register-button" value="OK">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-search" class="modal fade in">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+						<h4 class="modal-title" id="myModalLabel"> Search </h4>
+					</div>
+					<div style="text-align:center;padding:10px 0;">
+						<div class="search-box store-search-box mobile search-box-mobile">
+							<form action="/search" id="small-search-box-form-mobile" method="get" novalidate="novalidate"> <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+								<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms-mobile" autocomplete="off" name="q" placeholder="Search store">
+								<input type="submit" class="button-1 search-box-button" value="Search">
+							</form>
+							<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+							<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-set" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+					</div>
+					<div class="modal-body" style="padding-top:0">
+						<div class="header-upper mobile">
+							<div class="header-selectors-wrapper">
+								<div class="language-selector">
+									<select id="customerlanguage" name="customerlanguage" onchange="setLocation(this.value);">
+										<option value="/changelanguage/8?returnurl=%2fnews">es-PE</option>
+										<option value="/changelanguage/9?returnurl=%2fnews"> español(España)</option>
+										<option selected="selected" value="/changelanguage/1?returnurl=%2fnews">English</option>
+										<option value="/changelanguage/2?returnurl=%2fnews">简体中文</option>
+										<option value="/changelanguage/4?returnurl=%2fnews">русский</option>
+									</select>
+								</div>
+							</div>
+							<div class="header-links-wrapper">
+								<div class="header-links">
+									<ul>
+										<li>
+											<a href="/register" class="ico-register">
+												<i class="iconfont icon-bussinessman"></i>Register
+											</a>
+										</li>
+										<li>
+											<a href="/login" class="ico-login">
+												<i class="iconfont icon-account"></i>Log in
+											</a>
+										</li>
+										<li>
+											<a href="/wishlist" class="ico-wishlist">
+												<i class="iconfont icon-favorite"></i>
+												<span class="wishlist-label">Wishlist</span>
+												<span class="wishlist-qty">(0)</span>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" tabindex="-1" role="dialog" id="editPayment">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Payment method</h4>
+					</div>
+					<div class="modal-body">
+						<style type="text/css">
+							/*7.24日调整*/
+							
+							.payment-method {
+								border-bottom: 1px #ccc solid;
+								border-right: 1px #ccc solid;
+								overflow: hidden;
+								margin-bottom: 15px;
+								border-top: 1px #ccc solid;
+							}
+							
+							.payment-method li {
+								float: left;
+								width: 25%;
+								margin-bottom: -1px;
+							}
+							
+							.payment-method li label {
+								width: 100%;
+							}
+							
+							.payment-method li>div {
+								border: 1px #ccc solid;
+								padding: 10px 5px 5px 5px;
+								height: 85px;
+								margin: 0;
+								overflow: hidden;
+								/* border-bottom: none; */
+								border-top: none;
+								border-right: none;
+							}
+							
+							.payment-method li div img {
+								height: 35px;
+								display: block;
+								margin-bottom: 5px;
+								max-width: 100%;
+								margin-left: auto;
+								margin-right: auto;
+							}
+							
+							@media only screen and (min-width: 100px) and (max-width: 640px) {
+								.payment-method li {
+									width: 50%;
+								}
+							}
+							/*7.24日调整完毕*/
+						</style>
+						<div class="payment-method">
+							<ul>
+								<li>
+									<div onclick="showOnlineTopic('Payments.Setcom')">
+										<label for="paymentmethod_0"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.Setcom/logo.jpg" alt="Credit &amp; Debit Card">
+										<input id="paymentmethod_0" type="radio" name="paymentmethod" value="Payments.Setcom">
+										Credit &amp; Debit Card</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.Manual')">
+										<label for="paymentmethod_1"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.Manual/logo.jpg" alt="Credit Card">
+										<input id="paymentmethod_1" type="radio" name="paymentmethod" value="Payments.Manual">
+										Credit Card</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.AuthorizeNet')">
+										<label for="paymentmethod_2"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.AuthorizeNet/logo.jpg" alt="Credit Card">
+										<input id="paymentmethod_2" type="radio" name="paymentmethod" value="Payments.AuthorizeNet" checked="checked">
+										Credit Card</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.PayPalDirect')">
+										<label for="paymentmethod_3"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.PayPalDirect/logo.jpg" alt="Credit Card">
+										<input id="paymentmethod_3" type="radio" name="paymentmethod" value="Payments.PayPalDirect">
+										Credit Card</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.EBS')">
+										<label for="paymentmethod_4"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.EBS/logo.jpg" alt="EBS">
+										<input id="paymentmethod_4" type="radio" name="paymentmethod" value="Payments.EBS">
+										EBS</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.IPPayments')">
+										<label for="paymentmethod_5"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.IPPayments/logo.jpg" alt="IPPayments">
+										<input id="paymentmethod_5" type="radio" name="paymentmethod" value="Payments.IPPayments">
+										IPPayments</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.Kqian')">
+										<label for="paymentmethod_6"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.Kqian/logo.jpg" alt="快钱">
+										<input id="paymentmethod_6" type="radio" name="paymentmethod" value="Payments.Kqian">
+										快钱</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.Pagosnet')">
+										<label for="paymentmethod_7"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.Pagosnet/logo.jpg" alt="Pagosnet">
+										<input id="paymentmethod_7" type="radio" name="paymentmethod" value="Payments.Pagosnet">
+										Pagosnet</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.PayMe')">
+										<label for="paymentmethod_8"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.PayMe/logo.jpg" alt="PayMe">
+										<input id="paymentmethod_8" type="radio" name="paymentmethod" value="Payments.PayMe">
+										PayMe</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.PaySera')">
+										<label for="paymentmethod_9"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.PaySera/logo.jpg" alt="PaySera">
+										<input id="paymentmethod_9" type="radio" name="paymentmethod" value="Payments.PaySera">
+										PaySera</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.SaferPay')">
+										<label for="paymentmethod_10"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.SaferPay/logo.jpg" alt="SaferPay">
+										<input id="paymentmethod_10" type="radio" name="paymentmethod" value="Payments.SaferPay">
+										SaferPay</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.WireCard')">
+										<label for="paymentmethod_11"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.WireCard/logo.jpg" alt="WireCard">
+										<input id="paymentmethod_11" type="radio" name="paymentmethod" value="Payments.WireCard">
+										WireCard</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.WorldPay')">
+										<label for="paymentmethod_12"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.WorldPay/logo.jpg" alt="WorldPay">
+										<input id="paymentmethod_12" type="radio" name="paymentmethod" value="Payments.WorldPay">
+										WorldPay</label>
+									</div>
+								</li>
+								<li>
+									<div onclick="showOnlineTopic('Payments.SetcomSid')">
+										<label for="paymentmethod_13"><img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.SetcomSid/logo.jpg" alt="Secure Instant Deposit">
+										<input id="paymentmethod_13" type="radio" name="paymentmethod" value="Payments.SetcomSid">
+										Secure Instant Deposit</label>
+									</div>
+								</li>
+								<li>
+									<div id="xianxiafukuan" onclick="showOfflineTopic(263)">
+										<label for="paymentmethod_14">
+										<img class="pic" src="http://dev.b2c3.tiens.com/plugins/Payments.Offline/logo.jpg" alt="TIENS Ragular EFT">
+										<input id="paymentmethod_14" type="radio" name="paymentmethod" value="Payments.Offline">
+										TIENS Ragular EFT</label>
+									</div>
+								</li>
+								<li>
+									<div></div>
+								</li>
+							</ul>
+						</div>
+						<div class="table-toolbar">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="btn-group">
+										<button id="sample_editable_1_new" class="btn btn-success btn-sm collapsed" data-toggle="collapse" href="#crPayment" aria-expanded="false">
+											<strong>Add New Payment Method</strong> <i class="fa fa-plus"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="crPayment" class="collapse note note-success">
+							<form class="form-horizontal" role="form">
+								<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-4 control-label">Chard hold name</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+											<span class="help-block">
+											A block of help text. </span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label">Creat cart type</label>
+										<div class="col-md-8">
+											<select class="form-control">
+												<option>Visa</option>
+												<option>Option 2</option>
+												<option>Option 3</option>
+												<option>Option 4</option>
+												<option>Option 5</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label">Creat cart number</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label">Expricitong Date</label>
+										<div class="col-md-5">
+											<select class="form-control">
+												<option>January</option>
+												<option>Option 2</option>
+												<option>Option 3</option>
+												<option>Option 4</option>
+												<option>Option 5</option>
+											</select>
+										</div>
+										<div class="col-md-3">
+											<select class="form-control">
+												<option>20</option>
+												<option>Option 2</option>
+												<option>Option 3</option>
+												<option>Option 4</option>
+												<option>Option 5</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label">CvC Number(What's this?)</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-actions">
+										<div class="row">
+											<div class="col-md-offset-4 col-md-8">
+												<button type="submit" class="btn green"><i class="fa fa-floppy-o"></i> Save New Payment Method</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="ver-middle">
+							<table class="table table-striped table-bordered table-hover" id="billingAdd">
+								<thead>
+									<tr>
+										<th class="table-checkbox">
+
+										</th>
+										<th data-hide="width480">
+											Full Name
+										</th>
+										<th data-hide="width480">
+											Phone Number
+										</th>
+										<th data-class="expand">
+											Address Details
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Save changes</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<div class="modal fade" tabindex="-1" role="dialog" id="editShipping">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Select Shipping</h4>
+					</div>
+					<div class="modal-body">
+						<ul class="list-group">
+							<li class="list-group-item">
+								<label class="no-margin"><input type="radio" id="inlineCheckbox1" value="option1" name="adf">&nbsp;Shipping by weight ($0.00)</label>
+							</li>
+							<li class="list-group-item">
+								<label class="no-margin"><input type="radio" id="inlineCheckbox1" value="option1" name="adf">&nbsp;Shipping Cost ($0.00)</label>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Save changes</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<div id="editBilling" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">
+							Billing Address Manager
+						</h4>
+					</div>
+					<div class="modal-body">
+						<div class="table-toolbar">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="btn-group">
+										<button id="sample_editable_1_new" class="btn btn-default btn-sm" data-toggle="collapse" href="#collapseExample" aria-expanded="false">
+											<strong class="text-success">Add New</strong> <i class="fa fa-plus"></i>
+											</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="note note-success collapse" id="collapseExample">
+							<form class="form-horizontal margin-top-10" role="form">
+								<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Street Name<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Street No<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">First name<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Last name<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Country<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<select class="form-control input-inline input-small">
+												<option value="0">Select country</option>
+												<option value="1">United States</option>
+												<option value="40">Hungary</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Province</label>
+										<div class="col-md-8">
+											<select class="form-control input-inline input-small">
+												<option value="0">Select Autonomous Communities</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">City</label>
+										<div class="col-md-8">
+											<select class="form-control input-inline input-small">
+												<option value="0">Please select city</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">City</label>
+										<div class="col-md-8">
+											<select class="form-control input-inline input-small">
+												<option value="0">Please select city</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Address 1<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Zip / postal code</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Phone number</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Fax number</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-4 col-md-8">
+											<button type="submit" class="btn green">Submit</button>
+											<button type="button" class="btn btn-default">Cancel</button>
+										</div>
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<div class="ver-middle">
+							<table class="table table-striped table-bordered table-hover" id="billingAdd">
+								<thead>
+									<tr>
+										<th class="table-checkbox">
+
+										</th>
+										<th data-hide="width480">
+											Full Name
+										</th>
+										<th data-hide="width480">
+											Phone Number
+										</th>
+										<th data-class="expand">
+											Address Details
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Save Address</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="editShippingaddress" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">
+							Billing Address Manager
+						</h4>
+					</div>
+					<div class="modal-body">
+						<div class="table-toolbar">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="btn-group">
+										<button id="sample_editable_1_new" class="btn btn-default btn-sm" data-toggle="collapse" href="#collapseExample2" aria-expanded="false">
+											<strong class="text-success">Add New</strong> <i class="fa fa-plus"></i>
+											</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="note note-success collapse" id="collapseExample2">
+							<form class="form-horizontal margin-top-10" role="form">
+								<div class="form-body">
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Street Name<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Street No<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">First name<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Last name<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Country<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<select class="form-control input-inline input-small">
+												<option value="0">Select country</option>
+												<option value="1">United States</option>
+												<option value="40">Hungary</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Province</label>
+										<div class="col-md-8">
+											<select class="form-control input-inline input-small">
+												<option value="0">Select Autonomous Communities</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">City</label>
+										<div class="col-md-8">
+											<select class="form-control input-inline input-small">
+												<option value="0">Please select city</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">City</label>
+										<div class="col-md-8">
+											<select class="form-control input-inline input-small">
+												<option value="0">Please select city</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Address 1<span class="required" aria-required="true"> * </span></label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Zip / postal code</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Phone number</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 col-xs-12  control-label">Fax number</label>
+										<div class="col-md-8">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-4 col-md-8">
+											<button type="submit" class="btn green">Submit</button>
+											<button type="button" class="btn btn-default">Cancel</button>
+										</div>
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<div class="ver-middle">
+							<table class="table table-striped table-bordered table-hover" id="shippingAdd">
+								<thead>
+									<tr>
+										<th class="table-checkbox">
+										</th>
+										<th data-hide="width480">
+											Full Name
+										</th>
+										<th data-hide="width480">
+											Phone Number
+										</th>
+										<th data-hide="width480">
+											Fax Number
+										</th>
+										<th data-class="expand">
+											Address Details
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td>
+											<input type="checkbox" class="checkboxes" value="1" />
+										</td>
+										<td>
+											积分抵
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											022-32145124
+										</td>
+										<td>
+											健康的房间里撒附件宽带连接阿弗莱克几点啦，发动机开始拉法基，放大镜看房价肯定。放大镜看手机
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Save Address</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="master-wrapper-page">
+			<div class="header">
+				<!--Topmenu begin-->
+				<div class="header-upper">
+					<div class="header-selectors-wrapper">
+						<div class="language-selector">
+							<select id="customerlanguage" name="customerlanguage" onchange="setLocation(this.value);">
+								<option value="/changelanguage/5?returnurl=%2fplatinum-kit">Deutsch</option>
+								<option value="/changelanguage/7?returnurl=%2fplatinum-kit">عربي/عربى</option>
+								<option selected="selected" value="/changelanguage/1?returnurl=%2fplatinum-kit">English</option>
+								<option value="/changelanguage/2?returnurl=%2fplatinum-kit">简体中文</option>
+								<option value="/changelanguage/4?returnurl=%2fplatinum-kit">русский</option>
+							</select>
+						</div>
+						<div class="peisong">
+							<i class="iconfont icon-truck" title="Delivery"></i>
+							<!--<span>  Delivery：</span>-->
+							<div class="textAddress">
+								<div title="United States>AE (Armed Forces Europe)>This is a test for a long name city">This is a test for a long name city</div><b></b></div>
+						</div>
+					</div>
+					<div class="header-links-wrapper">
+						<div class="header-links">
+							<ul>
+								<li>
+									<a href="注册.html"><i class="iconfont icon-bussinessman"></i>Register</a>
+								</li>
+								<li>
+									<a href="登录.html"><i class="iconfont icon-account"></i>Log in</a>
+								</li>
+								<li>
+									<a href="收藏.html"> <i class="iconfont icon-favorite"></i> <span class="wishlist-label">Wishlist</span> <span class="wishlist-qty">(0)</span> </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--topmenu end-->
+				<div class="header-lower">
+					<div class="header-logo">
+						<a href="index.html"> <img title="" alt="Tiens Store" src="Content/images/logo.png"> </a>
+					</div>
+					<div class="search-box store-search-box">
+						<form action="/search" id="small-search-box-form" method="get" novalidate="novalidate">
+							<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+							<input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms" autocomplete="off" name="q" placeholder="Search store">
+							<input type="submit" class="button-1 search-box-button" value="Search">
+						</form>
+						<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"> </ul>
+					</div>
+					<div class="peisong mobile">
+						<i class="iconfont icon-truck" title="Delivery"></i>
+						<div class="textAddress">
+							<div id="div_homeAddress_mobile" title="Hungary>Budapest>All areas in Budapest">All areas in Budapest</div><b></b></div>
+					</div>
+				</div>
+				<!--Logo End-->
+			</div>
+			<div id="myScrollspy">
+				<div class="header-menu">
+					<ul class="top-menu">
+						<li>
+							<a href="/personal-care"> Beauty </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/time-shadow"> TIME SHADOW® Facial Care </a>
+								</li>
+								<li>
+									<a href="/time-shadow-makeup"> TIME SHADOW® Makeup </a>
+								</li>
+								<li>
+									<a href="/toner"> Personal Care </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/body-care"> Body Care </a>
+										</li>
+										<li>
+											<a href="/mouth-care"> Mouth Care </a>
+										</li>
+										<li>
+											<a href="/female-care"> Female Care </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/milk"> Milk </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/spakare"> SPAKARE </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/perfume"> Perfume </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/homecare"> Homecare </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/wellness-equipment"> Wellness Equipment </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/fashion-luxury"> Fashion luxury </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/watch"> Watch </a>
+								</li>
+								<li>
+									<a href="/scarves"> Scarves </a>
+								</li>
+								<li>
+									<a href="/swimsuit"> Swimsuit </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/bikini"> BIKINI </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/promotional-products"> Promotional Products </a>
+						</li>
+						<li>
+							<a href="/multi-track-shop"> Multi-track Shop </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/platinum-kit"> Platinum Kit </a>
+								</li>
+								<li>
+									<a href="/gold-kit"> Gold Kit </a>
+								</li>
+								<li>
+									<a href="/silver-kit"> Silver Kit </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/about-us">About Us</a>
+						</li>
+					</ul>
+					<li id="topcartlink">
+						<a href="/cart"><i class="iconfont icon-icon" style="font-size: 24px;color: #8A8A8A;"></i> <span class="cart-label">Shopping cart</span> <span class="cart-qty">(0)</span> </a>
+					</li>
+					<div id="flyout-cart" class="flyout-cart" style="align-content:center">
+						<div class="mini-shopping-cart">
+							<div class="count">
+								There are
+								<a href="/cart">3 item(s)</a> in your cart. </div>
+							<div class="items">
+								<div class="item first">
+									<div class="picture">
+										<a href="/tianshi-zinc-capsuleseng" title="Show details for Tianshi Zinc Capsules(ENG)">
+											<img alt="Picture of Tianshi Zinc Capsules(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/default-image_70.png" title="Show details for Tianshi Zinc Capsules(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-zinc-capsuleseng">Tianshi Zinc Capsules(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 101530.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="picture">
+										<a href="/tianshi-vitality-softgelseng" title="Show details for Tianshi Vitality Softgels(ENG)">
+											<img alt="Picture of Tianshi Vitality Softgels(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000415_tianshi-vitality-softgelseng_70.jpeg" title="Show details for Tianshi Vitality Softgels(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-vitality-softgelseng">Tianshi Vitality Softgels(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 230750.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="picture">
+										<a href="/tianshi-cordyceps-capsuleseng" title="Show details for Tianshi Cordyceps Capsules(ENG)">
+											<img alt="Picture of Tianshi Cordyceps Capsules(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000300_tianshi-cordyceps-capsuleseng_70.jpeg" title="Show details for Tianshi Cordyceps Capsules(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-cordyceps-capsuleseng">Tianshi Cordyceps Capsules(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 2600.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="totals">Total PV/BV: 370.00/308.00 </div>
+							<div class="totals">Sub-Total: <strong>PEN 334880.00</strong></div>
+							<div class="buttons">
+								<input type="button" value="Go to cart" class="button-1 cart-button" onclick="setLocation('/cart')">
+							</div>
+						</div>
+					</div>
+					<div class="nav-toggle"><span></span></div>
+					<ul class="top-menu mobile">
+						<li>
+							<a href="/personal-care"> Beauty </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/time-shadow"> TIME SHADOW® Facial Care </a>
+								</li>
+								<li>
+									<a href="/time-shadow-makeup"> TIME SHADOW® Makeup </a>
+								</li>
+								<li>
+									<a href="/toner"> Personal Care </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/body-care"> Body Care </a>
+										</li>
+										<li>
+											<a href="/mouth-care"> Mouth Care </a>
+										</li>
+										<li>
+											<a href="/female-care"> Female Care </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/milk"> Milk </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/spakare"> SPAKARE </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/perfume"> Perfume </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/homecare"> Homecare </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/wellness-equipment"> Wellness Equipment </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/fashion-luxury"> Fashion luxury </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/watch"> Watch </a>
+								</li>
+								<li>
+									<a href="/scarves"> Scarves </a>
+								</li>
+								<li>
+									<a href="/swimsuit"> Swimsuit </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/bikini"> BIKINI </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/promotional-products"> Promotional Products </a>
+						</li>
+						<li>
+							<a href="/multi-track-shop"> Multi-track Shop </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/platinum-kit"> Platinum Kit </a>
+								</li>
+								<li>
+									<a href="/gold-kit"> Gold Kit </a>
+								</li>
+								<li>
+									<a href="/silver-kit"> Silver Kit </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/about-us">About Us</a>
+						</li>
+
+					</ul>
+					<div class="menu-set" data-toggle="modal" data-target="#menu-set"></div>
+					<div class="menu-search" data-toggle="modal" data-target="#menu-search"></div>
+					<div class="menu-shopCar"><span>12</span></div>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							$('.nav-toggle').click(function() {
+								$(this).toggleClass("active");
+								$(this).siblings('.top-menu.mobile').slideToggle('slow');
+							});
+							$('.top-menu.mobile .sublist-toggle').click(function() {
+								$(this).siblings('.sublist').slideToggle('slow');
+							});
+						});
+					</script>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$(".header-menu,.page-sidebar").affix({
+						offset: {
+							top: 65
+						}
+					});
+				});
+			</script>
+			<div class="master-wrapper-content dashContent">
+				<div class="master-column-wrapper">
+					<div class="metrocontent">
+						<div class="master-wrapper-content">
+							<div class="page-header navbar" style="background:none; min-height: initial; height: inherit; overflow: hidden; border-bottom: 0; ">
+								<a href="javascript:;" class="menu-toggler responsive-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="float:left; margin:0 15px; "> </a>
+							</div>
+							<!--左侧导航菜单-->
+							<div class="page-sidebar-wrapper">
+								<div class="page-sidebar navbar-collapse collapse">
+									<!-- BEGIN SIDEBAR MENU -->
+									<div class="sidebar-toggler" style="padding: 15px 0 0 15px;"><i class="icon-settings" style="font-size: 24px;"></i></div>
+									<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+									<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+										<li>
+											<a href="dashboard.html"> <i class="icon-home"></i> <span class="title">Dashboard</span> </a>
+										</li>
+										<li>
+											<a href="javascript:;"> <i class="icon-users"></i> <span class="title">推荐新人</span> <span class="arrow"></span> </a>
+											<ul class="sub-menu" style="display:none">
+												<li>
+													<a href="待加入.html"> 待加入 </a>
+												</li>
+												<li>
+													<a href="新人列表.html"> 新人列表 </a>
+												</li>
+											</ul>
+										</li>
+										<li class="active">
+											<a href="javascript:;"> <i class="icon-bar-chart"></i> <span class="title">数据查询</span> <span class="arrow"></span> </a>
+											<ul class="sub-menu" style="display:block">
+												<li>
+													<a href="网络查询树状查询.html"> 网络查询（树状） </a>
+												</li>
+												<li>
+													<a href="网络查询列表.html"> 网络查询（列表） </a>
+												</li>
+												<li>
+													<a href="业绩查询实时.html"> 业绩查询（实时） </a>
+												</li>
+												<li>
+													<a href="业绩查询历史.html"> 业绩查询（历史） </a>
+												</li>
+												<li class="open">
+													<a href="多边业绩增长查询.html"> 多边业绩增长查询 </a>
+												</li>
+												<li>
+													<a href="奖金查询.html"> 奖金查询 </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:;"> <i class="icon-camera"></i> <span class="title">可视化图表</span> <span class="arrow"></span> </a>
+											<ul class="sub-menu" style="display:none">
+												<li>
+													<a href="新人增长趋势图.html"> 新人增长趋势图 </a>
+												</li>
+												<li>
+													<a href="整网业绩趋势图.html"> 整网业绩趋势图</a>
+												</li>
+												<li>
+													<a href="多边业绩占比图.html"> 多边业绩占比图 </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:;"> <i class=" icon-like"></i> <span class="title">购物体验</span> <span class="arrow"></span> </a>
+											<ul class="sub-menu" style="display:none">
+												<li>
+													<a href="快速购物.html">快速购物（延期） </a>
+												</li>
+												<li>
+													<a href="自动购货计划.html">自动购货计划（延期） </a>
+												</li>
+												<li>
+													<a href="我的订单.html">我的订单 </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:;"> <i class="icon-user-following"></i> <span class="title">账户信息</span> <span class="arrow"></span> </a>
+											<ul class="sub-menu" style="display:none">
+												<li>
+													<a href="头像.html"> 头像 </a>
+												</li>
+												<li>
+													<a href="基本信息.html"> 基本信息 </a>
+												</li>
+												<li>
+													<a href="地址簿.html"> 地址簿 </a>
+												</li>
+												<li>
+													<a href="偏好设置.html"> 偏好设置（延期） </a>
+												</li>
+												<li>
+													<a href="修改密码.html"> 修改密码 </a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="javascript:;"> <i class="icon-user-follow"></i> <span class="title"> 个人主页（延期） </span> </a>
+										</li>
+									</ul>
+									<!-- END SIDEBAR MENU -->
+								</div>
+							</div>
+							<!--结束左侧导航菜单-->
+							<div class="page-content-wrapper">
+								<div class="page-content" style=" padding-top: 0; ">
+									<div class="portlet light dingdan-page">
+										<div class="portlet-title">
+											<div class="caption">
+												<i class="icon-basket font-green-sharp"></i>
+												<span class="caption-subject font-green-sharp bold uppercase"> Autoship Preview</span>
+											</div>
+										</div>
+										<div class="portlet-body">
+											<div class="ver-middle">
+												<button value="checkout" class="btn btn-default btn-sm pull-right" onclick="fullscreen('snd3tree')"><i class="fa fa-arrows-alt"></i></button>
+												<script type="text/javascript">
+													function fullscreen(a) {
+														var elem = document.getElementById(a);
+														var h1 = document.getElementById("h1");
+														requestFullScreen(elem); // 某个页面元素
+														//requestFullScreen(document.documentElement); // 整个网页
+													};
+
+													function requestFullScreen(element) {
+														// 判断各种浏览器，找到正确的方法
+														element.style.cssText = 'width:100%;overflow:auto';
+														$("#snd3tree svg").attr("width",4000);
+														var requestMethod = element.requestFullScreen || //W3C
+															element.webkitRequestFullScreen || //Chrome等
+															element.mozRequestFullScreen || //FireFox
+															element.msRequestFullScreen; //IE11
+														if(requestMethod) {
+															requestMethod.call(element);
+														} else if(typeof window.ActiveXObject !== "undefined") { //for Internet Explorer
+															var wscript = new ActiveXObject("WScript.Shell");
+															if(wscript !== null) {
+																wscript.SendKeys("{F11}");
+															}
+														}
+													}
+
+													//退出全屏 判断浏览器种类
+													function exitFull() {
+														// 判断各种浏览器，找到正确的方法
+														var exitMethod = document.exitFullscreen || //W3C
+															document.mozCancelFullScreen || //Chrome等
+															document.webkitExitFullscreen || //FireFox
+															document.webkitExitFullscreen; //IE11
+														if(exitMethod) {
+															exitMethod.call(document);
+														} else if(typeof window.ActiveXObject !== "undefined") { //for Internet Explorer
+															var wscript = new ActiveXObject("WScript.Shell");
+															if(wscript !== null) {
+																wscript.SendKeys("{F11}");
+															}
+														}
+													}
+												</script>
+												<div id="snd3tree">
+													<svg width="661" height="1154" class="overlay">
+														<g transform="translate(165.25,100)scale(1.5,1.5)">
+															<path class="link" d="M0,320C130,320 130,20 260,20"></path>
+															<path class="link" d="M0,320C130,320 130,60 260,60"></path>
+															<path class="link" d="M0,320C130,320 130,100 260,100"></path>
+															<path class="link" d="M0,320C130,320 130,140 260,140"></path>
+															<path class="link" d="M0,320C130,320 130,180 260,180"></path>
+															<path class="link" d="M0,320C130,320 130,220 260,220"></path>
+															<path class="link" d="M0,320C130,320 130,260 260,260"></path>
+															<path class="link" d="M0,320C130,320 130,300 260,300"></path>
+															<path class="link" d="M0,320C130,320 130,340 260,340"></path>
+															<path class="link" d="M0,320C130,320 130,380 260,380"></path>
+															<path class="link" d="M0,320C130,320 130,420 260,420"></path>
+															<path class="link" d="M0,320C130,320 130,460 260,460"></path>
+															<path class="link" d="M0,320C130,320 130,500 260,500"></path>
+															<path class="link" d="M0,320C130,320 130,540 260,540"></path>
+															<path class="link" d="M0,320C130,320 130,580 260,580"></path>
+															<path class="link" d="M0,320C130,320 130,620 260,620"></path>
+															<g class="node" transform="translate(260,380)">
+																<circle class="nodeCircle" r="4.5" style="fill: lightsteelblue;"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(87034602)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:8 PPV:0.00 GPV:0.00 TNPV:134.10 APV:8,821.98</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,60)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">AGATHA OMORO(84939504)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:5 PPV:0.00 GPV:0.00 TNPV:0.00 APV:204.80</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,100)">
+																<circle class="nodeCircle" r="4.5" style="fill: lightsteelblue;"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Anthonia Ugorji(81159474)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:7 PPV:0.00 GPV:0.00 TNPV:0.00 APV:2,332.98</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,580)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">QWERTY QWERTY(74349003)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:4 PPV:0.00 GPV:0.00 TNPV:0.00 APV:0.00</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,500)">
+																<circle class="nodeCircle" r="4.5" style="fill: lightsteelblue;"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">KHAYELIHLE MASONDO(87048042)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:6 PPV:0.00 GPV:0.00 TNPV:0.00 APV:831.77</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,620)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">TEST WU(88768603)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:4 PPV:0.00 GPV:0.00 TNPV:0.00 APV:0.00</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,340)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(81171766)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:4 PPV:0.00 GPV:0.00 TNPV:0.00 APV:0.00</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,420)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(87047703)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:5 PPV:0.00 GPV:0.00 TNPV:0.00 APV:611.88</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,540)">
+																<circle class="nodeCircle" r="4.5" style="fill: lightsteelblue;"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Olufolake Amole(81159115)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:7 PPV:0.00 GPV:0.00 TNPV:0.00 APV:2,856.51</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,260)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(81171799)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:4 PPV:0.00 GPV:0.00 TNPV:0.00 APV:0.00</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,20)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">3232 3223(74347005)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:4 PPV:0.00 GPV:0.00 TNPV:0.00 APV:0.00</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,460)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">FIRST NAME LAST NAME(90631003)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:4 PPV:0.00 GPV:0.00 TNPV:0.00 APV:0.00</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,220)">
+																<circle class="nodeCircle" r="4.5" style="fill: lightsteelblue;"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(87034646)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:8 PPV:0.00 GPV:0.00 TNPV:824.68 APV:14,816.37</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,180)">
+																<circle class="nodeCircle" r="4.5" style="fill: lightsteelblue;"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(81144955)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:8 PPV:0.00 GPV:0.00 TNPV:0.00 APV:1,780.93</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,300)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(81141898)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:5 PPV:0.00 GPV:0.00 TNPV:0.00 APV:782.38</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(260,140)">
+																<circle class="nodeCircle" r="4.5" style="fill: rgb(255, 255, 255);"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(81171800)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:4 PPV:0.00 GPV:0.00 TNPV:0.00 APV:0.00</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+															<g class="node" transform="translate(0,320)">
+																<circle class="nodeCircle" r="4.5" style="fill: lightsteelblue;"></circle><text x="-10" dy="-1em" class="nodeText" text-anchor="end" style="fill-opacity: 1;">Failure of renewal(87034539)</text><text x="-10" dy=".35em" class="nodeText" fill="#2196F3" text-anchor="end" style="fill-opacity: 1;">Star:8 PPV:0.00 GPV:0.00 TNPV:958.78 APV:30,394.17</text>
+																<circle class="ghostCircle" r="30" opacity="0.2" pointer-events="mouseover" style="fill: red;"></circle>
+															</g>
+														</g>
+													</svg>
+												</div>
+												<table class="table table-striped table-bordered table-hover" data-name="dt_basic1" id="tab-easytab3">
+													<thead>
+														<tr>
+															<th data-class="expand">Frequency</th>
+															<th>Cycle Times</th>
+															<th data-hide="width480">Ship Date</th>
+															<th data-hide="width480">Next Ship Date</th>
+															<th data-hide="width480">Failed Times</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Every 1 Month(s)</td>
+															<td><span style="display: none;">6</span><input type="text" name="" id="" value="6" style="width: 40px;height: 24px;" />
+																<a href="javascript:;" class="btn btn-xs white right edit">Edit <i class="fa fa-edit"></i> </a>
+															</td>
+															<td>10th per month</td>
+															<td>2017-06-10</td>
+															<td>1</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="row margin-top-15">
+												<div class="col-md-6">
+													<!-- BEGIN Portlet PORTLET-->
+													<div class="panel panel-default">
+														<div class="panel-heading">
+															<div class="caption font-green-sharp">
+																<i class="icon-wallet font-green-sharp"></i>
+																<span class="caption-subject bold uppercase"> Payment</span>
+																<a href="javascript:;" class="btn btn-circle btn-default btn-xs right" style=" margin-top: -3px; " data-toggle="modal" data-target="#editPayment">
+																	<i class="fa fa-pencil"></i> Edit </a>
+															</div>
+														</div>
+														<div class="panel-body">
+															<div class="row static-info">
+																<div class="col-md-6 name">
+																	Payment method：
+																</div>
+																<div class="col-md-6 value">
+																	<p>Credit Card</p>
+																	<p>************4242</p>
+																	<p>11/2017</p>
+																	<p>Visa</p>
+																</div>
+															</div>
+
+														</div>
+													</div>
+													<!-- END Portlet PORTLET-->
+												</div>
+												<div class="col-md-6">
+													<!-- BEGIN Portlet PORTLET-->
+													<div class="panel panel-default">
+														<div class="panel-heading">
+															<div class="caption font-red-sunglo">
+																<i class="icon-basket-loaded font-red-sunglo"></i>
+																<span class="caption-subject bold uppercase"> Shipping</span>
+																<a href="javascript:;" class="btn btn-circle btn-default btn-xs right" style=" margin-top: -3px; " data-toggle="modal" data-target="#editShipping">
+																	<i class="fa fa-pencil"></i> Edit </a>
+															</div>
+														</div>
+														<div class="panel-body" style=" height: 104px; ">
+															<div class="row static-info">
+																<div class="col-md-6 name">Shipping methhod:</div>
+																<div class="col-md-6 value">Shipping by weight</div>
+															</div>
+															<div class="row static-info">
+																<div class="col-md-6 name">Shipping status:</div>
+																<div class="col-md-6 value">Not yet shipped</div>
+															</div>
+
+														</div>
+													</div>
+													<!-- END Portlet PORTLET-->
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<!-- BEGIN Portlet PORTLET-->
+													<div class="panel panel-default">
+														<div class="panel-heading">
+															<div class="caption font-purple-plum">
+																<i class="icon-map font-purple-plum"></i>
+																<span class="caption-subject bold uppercase"> Billing address</span>
+																<a href="javascript:;" class="btn btn-circle btn-default btn-xs right" style=" margin-top: -3px;" data-toggle="modal" data-target="#editBilling">
+																	<i class="fa fa-pencil"></i> Edit </a>
+															</div>
+														</div>
+														<div class="panel-body" style=" height: 150px; ">
+															<div class="row static-info">
+																<div class="col-md-5 name">Full Name:</div>
+																<div class="col-md-7 value">
+																	Jhon Doe
+																</div>
+															</div>
+															<div class="row static-info">
+																<div class="col-md-5 name">
+																	Phone Number:
+																</div>
+																<div class="col-md-7 value">
+																	12234389
+																</div>
+															</div>
+															<div class="row static-info">
+																<div class="col-md-5 name">Address Details:</div>
+																<div class="col-md-7 value">New York Sldfk dlfl dlfkldfl dlfkdl ldk;a</div>
+															</div>
+
+														</div>
+													</div>
+													<!-- END Portlet PORTLET-->
+												</div>
+												<div class="col-md-6">
+													<!-- BEGIN Portlet PORTLET-->
+													<div class="panel panel-default">
+														<div class="panel-heading">
+															<div class="caption font-yellow-crusta">
+																<i class="icon-map font-yellow-crusta"></i>
+																<span class="caption-subject bold uppercase"> Shipping address</span>
+																<a href="javascript:;" class="btn btn-circle btn-default btn-xs right" style=" margin-top: -3px;" data-toggle="modal" data-target="#editShippingaddress">
+																	<i class="fa fa-pencil"></i> Edit </a>
+															</div>
+														</div>
+														<div class="panel-body">
+															<div class="row static-info">
+																<div class="col-md-5 name">Full Name:</div>
+																<div class="col-md-7 value">
+																	Jhon Doe
+																</div>
+															</div>
+															<div class="row static-info">
+																<div class="col-md-5 name">
+																	Phone Number:
+																</div>
+																<div class="col-md-7 value">
+																	12234389
+																</div>
+															</div>
+															<div class="row static-info">
+																<div class="col-md-5 name">
+																	FAX:
+																</div>
+																<div class="col-md-7 value">
+																	New York
+																</div>
+															</div>
+															<div class="row static-info">
+																<div class="col-md-5 name">Address Details:</div>
+																<div class="col-md-7 value">New York Sldfk dlfl dlfkldfl dlfkdl ldk;a</div>
+															</div>
+
+														</div>
+													</div>
+													<!-- END Portlet PORTLET-->
+												</div>
+											</div>
+											<div class="gLine" style=" margin-bottom: 20px; "></div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="ovh ver-middle">
+														<button class="btn btn-default pull-right"><i class="fa fa-cog"></i> Change Products</button>
+														<table class="table table-striped table-hover table-bordered" data-name="dt_basic2">
+															<thead>
+																<tr>
+																	<th data-class="expand">
+																		SKU
+																	</th>
+																	<th data-hide="width480">
+																		Image
+																	</th>
+																	<th data-hide="width480">
+																		Product Name
+																	</th>
+																	<th>
+																		Price
+																	</th>
+																	<th data-hide="width480">
+																		PV/BV</th>
+																	<th>
+																		Qty
+																	</th>
+																	<th data-hide="width480">
+																		Total
+																	</th>
+																</tr>
+															</thead>
+															<tbody>
+
+																<tr>
+																	<td> SP0100275
+																	</td>
+																	<td>
+																		<img src="Content/images/0000363_purificador-multifuncional-de-nevera-tiens_70.jpeg">
+																	</td>
+																	<td>
+																		Tianshi Cell Rejuvenation Capsules (ENG)
+																	</td>
+																	<td>
+																		$112,000.00
+																	</td>
+																	<td>
+																		50.00 / 70.00
+																	</td>
+																	<td>
+																		<input type="text" name="" id="" value="" style="width: 50px;" class="input-sm">
+																	</td>
+																	<td>
+																		$12,000.00
+																	</td>
+																</tr>
+																<tr>
+																	<td class="sorting_1"> SP0100275
+																	</td>
+																	<td>
+																		<img src="Content/images/0000363_purificador-multifuncional-de-nevera-tiens_70.jpeg">
+																	</td>
+																	<td>
+																		Tianshi Cell Rejuvenation Capsules (ENG)
+																	</td>
+																	<td>
+																		$8,000.00
+																	</td>
+																	<td>
+																		90.00 / 100.00
+																	</td>
+																	<td>
+																		<input type="text" name="" id="" value="" style="width: 50px;" class="input-sm">
+																	</td>
+																	<td>
+																		$12,000.00
+																	</td>
+																</tr>
+																<tr>
+																	<td class="sorting_1"> SP0100275
+																	</td>
+																	<td>
+																		<img src="Content/images/0000363_purificador-multifuncional-de-nevera-tiens_70.jpeg">
+																	</td>
+																	<td>
+																		Tianshi Cell Rejuvenation Capsules (ENG)
+																	</td>
+																	<td>
+																		$120,000.00
+																	</td>
+																	<td>
+																		100.00 / 100.00
+																	</td>
+																	<td>
+																		<input type="text" name="" id="" value="" style="width: 50px;" class="input-sm">
+																	</td>
+																	<td>
+																		$12,000.00
+																	</td>
+																</tr>
+																<tr role="row" class="even">
+																	<td class="sorting_1"> SP0100275
+																	</td>
+																	<td>
+																		<img src="Content/images/0000363_purificador-multifuncional-de-nevera-tiens_70.jpeg">
+																	</td>
+																	<td>
+																		Tianshi Cell Rejuvenation Capsules (ENG)
+																	</td>
+																	<td>
+																		$72,000.00
+																	</td>
+																	<td>
+																		100.00 / 100.00
+																	</td>
+																	<td>
+																		<input type="text" name="" id="" value="" style="width: 50px;" class="input-sm">
+																	</td>
+																	<td>
+																		$12,000.00
+																	</td>
+																</tr>
+																<tr>
+																	<td class="sorting_1"> SP0100275
+																	</td>
+																	<td>
+																		<img src="Content/images/0000363_purificador-multifuncional-de-nevera-tiens_70.jpeg">
+																	</td>
+																	<td>
+																		Tianshi Cell Rejuvenation Capsules (ENG)
+																	</td>
+																	<td>
+																		$32,000.00
+																	</td>
+																	<td>
+																		100.00 / 100.00
+																	</td>
+																	<td>
+																		<input type="text" name="" id="" value="" style="width: 50px;" class="input-sm">
+																	</td>
+																	<td>
+																		$12,000.00
+																	</td>
+																</tr>
+																<tr>
+																	<td class="sorting_1"> SP0100275
+																	</td>
+																	<td>
+																		<img src="Content/images/0000363_purificador-multifuncional-de-nevera-tiens_70.jpeg">
+																	</td>
+																	<td>
+																		Tianshi Cell Rejuvenation Capsules (ENG)
+																	</td>
+																	<td>
+																		$127,000.00
+																	</td>
+																	<td>
+																		100.00 / 100.00
+																	</td>
+																	<td>
+																		<input type="text" name="" id="" value="" style="width: 50px;" class="input-sm">
+																	</td>
+																	<td>
+																		$12,000.00
+																	</td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr>
+																	<td colspan="7" class="text-right"><span>PV/BV:<b id="totalpvbv" class="text-success">5510/5510</b></span><br /><span>Total:<b id="totalSum" class="text-success">$750.00</b></span></td>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
+													<!-- END Portlet PORTLET-->
+												</div>
+											</div>
+											<div class="CountDetails">
+												<div class="right f16">
+													<div class="tab-le-fill">
+														<div class="table-title">
+															<table class="table-fill">
+																<tbody class="table-hover">
+																	<tr>
+																		<td class="text-left">Sub-Total:</td>
+																		<td class="text-left">$4,679.25</td>
+																	</tr>
+																	<tr>
+																		<td class="text-left">Shipping:</td>
+																		<td class="text-left">$5.31</td>
+																	</tr>
+																	<tr>
+																		<td class="text-left">Total Freight Tax :</td>
+																		<td class="text-left">$0.30</td>
+																	</tr>
+																	<tr>
+																		<td class="text-left">Tax 27%:</td>
+																		<td class="text-left">$994.80</td>
+																	</tr>
+																	<tr>
+																		<td class="text-left">Total PV:</td>
+																		<td class="text-left">85.00</td>
+																	</tr>
+																	<tr>
+																		<td class="text-left">Total BV:</td>
+																		<td class="text-left">85.00</td>
+																	</tr>
+																	<tr>
+																		<td class="text-left">Total Value Added Tax:</td>
+																		<td class="text-left">$93.58</td>
+																	</tr>
+																	<tr>
+																		<td class="text-left">Order Total:</td>
+																		<td class="text-left cal"><b class="cr">$4,778.14</b></td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cart-footer">
+												<div style="padding: 15px 10px 0 10px; text-align: right;">
+													<button type="submit" id="checkout" name="checkout" value="checkout" class="btn btn-default" onclick="window.location.href='New-Autoship.html'"><i class="fa fa-chevron-left"></i> Back to Previous </button>
+													<button type="submit" id="checkout" name="checkout" value="checkout" class="btn btn-success" onclick="window.location.href='autoship_successful.html'"><i class="fa fa-floppy-o"></i> Generate Autoship </button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--页脚开始-->
+			<div class="footer">
+				<div class="footer-upper">
+					<div class="footer-block information">
+						<div class="title">
+							<strong>Information</strong>
+						</div>
+						<ul class="list">
+							<li>
+								<a href="/sitemap">Sitemap</a>
+							</li>
+							<li>
+								<a href="/shipping-returns">Shipping &amp; returns</a>
+							</li>
+							<li>
+								<a href="/business-opportunity">Business Opportunity</a>
+							</li>
+							<li>
+								<a href="/about-us">About Us</a>
+							</li>
+							<li>
+								<a href="/privacy-notice">Privacy notice</a>
+							</li>
+							<li>
+								<a href="/conditions-of-use">Conditions of Use</a>
+							</li>
+							<li>
+								<a href="/contactus">Contact us</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-block customer-service">
+						<div class="title">
+							<strong>Customer service</strong>
+						</div>
+						<ul class="list">
+							<li>
+								<a href="/search">Search</a>
+							</li>
+							<li>
+								<a href="/news">News</a>
+							</li>
+							<li>
+								<a href="/blog">Blog</a>
+							</li>
+							<li>
+								<a href="/digitaldownloads">Digital Downloads</a>
+							</li>
+							<li>
+								<a href="/recentlyviewedproducts">Recently viewed products</a>
+							</li>
+							<li>
+								<a href="/newproducts">New products</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-block my-account">
+						<div class="title">
+							<strong>My account</strong>
+						</div>
+						<ul class="list">
+							<li>
+								<a href="/customer/info">My account</a>
+							</li>
+							<li>
+								<a href="/order/history">Orders</a>
+							</li>
+							<li>
+								<a href="/customer/addresses">Addresses</a>
+							</li>
+							<li>
+								<a href="/cart">Shopping cart</a>
+							</li>
+							<li>
+								<a href="/wishlist">Wishlist</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-block follow-us">
+						<div class="social">
+							<div class="title">
+								<strong>Follow us</strong>
+							</div>
+							<ul class="networks">
+								<li class="facebook">
+									<a href="True" target="_blank">Facebook</a>
+								</li>
+								<li class="twitter">
+									<a href="https://twitter.com/nopCommerce" target="_blank">Twitter</a>
+								</li>
+								<li class="rss">
+									<a href="/news/rss/1">RSS</a>
+								</li>
+								<li class="youtube">
+									<a href="False" target="_blank">YouTube</a>
+								</li>
+								<li class="google-plus">
+									<a href="http://www.facebook.com/nopCommerce" target="_blank">Google+</a>
+								</li>
+							</ul>
+						</div>
+						<div class="newsletter">
+							<div class="title">
+								<strong>Newsletter</strong>
+							</div>
+							<div class="newsletter-subscribe" id="newsletter-subscribe-block">
+								<div class="newsletter-email">
+									<input class="newsletter-subscribe-text" id="newsletter-email" name="NewsletterEmail" placeholder="Enter your email here..." type="text" value="">
+									<input type="button" value="Subscribe" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button">
+								</div>
+								<div class="newsletter-validation">
+									<span id="subscribe-loading-progress" style="display: none;" class="please-wait">Wait...</span>
+									<span class="field-validation-valid" data-valmsg-for="NewsletterEmail" data-valmsg-replace="true"></span>
+								</div>
+							</div>
+							<div class="newsletter-result" id="newsletter-result-block"></div>
+						</div>
+
+					</div>
+				</div>
+				<div class="footer-lower">
+					<div class="footer-info">
+						<span class="footer-disclaimer">
+                            Copyright © 2016 Tiens Store. All rights reserved.
+
+                            <span>
+                                --192.168.2.130
+                            </span>
+
+						</span>
+					</div>
+					<div class="footer-powered-by">
+						Powered by
+						<a href="http://www.nopcommerce.com/">nopCommerce</a>
+					</div>
+				</div>
+			</div>
+			<!--页脚结束-->
+			<!-- BEGIN PAGE LEVEL PLUGINS -->
+			<script type="text/javascript" src="Content/css/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+			<script type="text/javascript" src="Content/css/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+			<script type="text/javascript" src="Content/css/global/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+			<script src="Content/css/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+			<script src="Content/css/global/scripts/metronic.js" type="text/javascript"></script>
+			<!-- END PAGE LEVEL PLUGINS -->
+			<!-- BEGIN PAGE LEVEL SCRIPTS -->
+			<script>
+				jQuery(document).ready(function() {
+					$("input[type='checkbox'],input[type='radio']").uniform();
+					/* BASIC ;*/
+					var dt_basic1, dt_basic2, dt_basic3, dt_basic4 = undefined;
+					var breakpointDefinition = {
+						width1024: 2000,
+						width480: 480
+					};
+					$("#billingAdd").dataTable({
+						"preDrawCallback": function() {
+							// Initialize the responsive datatables helper once.
+							if(!dt_basic3) {
+								dt_basic3 = new ResponsiveDatatablesHelper($(this), breakpointDefinition);
+							}
+						},
+						"rowCallback": function(nRow) {
+							dt_basic3.createExpandIcon(nRow);
+						},
+						"drawCallback": function(oSettings) {
+							dt_basic3.respond();
+						},
+						"sort": false,
+						"filter": false,
+						"info": false,
+						"paginate": false
+					});
+					$("#shippingAdd").dataTable({
+						"preDrawCallback": function() {
+							// Initialize the responsive datatables helper once.
+							if(!dt_basic4) {
+								dt_basic4 = new ResponsiveDatatablesHelper($(this), breakpointDefinition);
+							}
+						},
+						"rowCallback": function(nRow) {
+							dt_basic4.createExpandIcon(nRow);
+						},
+						"drawCallback": function(oSettings) {
+							dt_basic4.respond();
+						},
+						"sort": false,
+						"filter": false,
+						"info": false,
+						"paginate": false
+					});
+					$("table[data-name='dt_basic1']").dataTable({
+						"preDrawCallback": function() {
+							// Initialize the responsive datatables helper once.
+							if(!dt_basic1) {
+								dt_basic1 = new ResponsiveDatatablesHelper($(this), breakpointDefinition);
+							}
+						},
+						"rowCallback": function(nRow) {
+							dt_basic1.createExpandIcon(nRow);
+						},
+						"drawCallback": function(oSettings) {
+							dt_basic1.respond();
+						},
+						//					"pageLength": 10,
+						//"pagingType": "simple",
+						//"showFooter": true,
+						"sort": false,
+						"filter": false,
+						"info": false,
+						"paginate": false
+					});
+					$("table[data-name='dt_basic2']").dataTable({
+						"preDrawCallback": function() {
+							// Initialize the responsive datatables helper once.
+							if(!dt_basic2) {
+								dt_basic2 = new ResponsiveDatatablesHelper($(this), breakpointDefinition);
+							}
+						},
+						"rowCallback": function(nRow) {
+							dt_basic2.createExpandIcon(nRow);
+						},
+						"drawCallback": function(oSettings) {
+							dt_basic2.respond();
+						},
+						//					"pageLength": 10,
+						//"pagingType": "simple",
+						//"showFooter": true,
+						"filter": false,
+						"info": false,
+						"paginate": false
+					});
+					/* END BASIC */
+					$("#billingAdd_wrapper .row").hide();
+				});
+			</script>
+		</div>
+	</body>
+
+</html>
