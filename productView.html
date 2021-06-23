@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+		<link href="http://dev.b2c3.tiens.com/Content/Install/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/styles.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/iconfont.css" rel="stylesheet" type="text/css">
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="http://dev.b2c3.tiens.com/Scripts/bootstrap.min.js" type="text/javascript"></script>
+		<script src="Scripts/jquery.scrollUp.min.js" type="text/javascript"></script>
+		<script src="Scripts/public.address.js" type="text/javascript"></script>
+		<script src="Scripts/codex-fly.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.product-box-add-to-cart-button,.add-to-cart-button').click(function() {
+					var display =$('#topcartlink').css('display');
+					var itemImg = $(this).parents(".product-item,.product-essential").find("img").eq(0);
+					if(display == 'none'){
+					flyToElement($(itemImg), $('.menu-shopCar'));
+					}else{
+					flyToElement($(itemImg), $('#topcartlink'));
+					}
+				});
+			});
+		</script>
+		<title>快速购物</title>
+	</head>
+
+<body data-target="#myScrollspy" data-spy="scroll">
+		<div id="peisong">
+			<div class="box">
+				<div>
+					<a href="javascript:" class="closed"></a>
+				</div>
+				<div class="login-page">
+					<p class="title"><b>Delivery：</b> Please select address </p>
+					<div class="selBtn">
+						<span> Country：</span>
+						<select name="product_attribute_10" id="select_country" class="valid">
+							<option selected="selected" value="1">United States</option>
+							<option value="35">Germany</option>
+							<option value="40">Hungary</option>
+							<option value="72">Spain</option>
+						</select>
+					</div>
+					<div class="selBtn">
+						<span>Province： </span>
+						<select name="product_attribute_10" id="select_province" class="valid">
+							<option selected="selected" value="2">AE (Armed Forces Europe)</option>
+							<option value="3">Alabama</option>
+							<option value="4">Alaska</option>
+							<option value="5">American Samoa</option>
+							<option value="6">AP (Armed Forces Pacific)</option>
+							<option value="8">Arkansas</option>
+							<option value="9">California</option>
+							<option value="11">Connecticut</option>
+							<option value="12">Delaware</option>
+							<option value="13">District of Columbia</option>
+							<option value="14">Federated States of Micronesia</option>
+							<option value="15">Florida</option>
+							<option value="16">Georgia</option>
+							<option value="17">Guam</option>
+							<option value="18">Hawaii</option>
+							<option value="19">Idaho</option>
+							<option value="20">Illinois</option>
+							<option value="21">Indiana</option>
+							<option value="22">Iowa</option>
+							<option value="23">Kansas</option>
+							<option value="24">Kentucky</option>
+							<option value="25">Louisiana</option>
+							<option value="26">Maine</option>
+							<option value="27">Marshall Islands</option>
+							<option value="28">Maryland</option>
+							<option value="29">Massachusetts</option>
+							<option value="30">Michigan</option>
+							<option value="31">Minnesota</option>
+							<option value="32">Mississippi</option>
+							<option value="33">Missouri</option>
+							<option value="34">Montana</option>
+							<option value="35">Nebraska</option>
+							<option value="36">Nevada</option>
+							<option value="37">New Hampshire</option>
+							<option value="38">New Jersey</option>
+							<option value="39">New Mexico</option>
+							<option value="40">New York</option>
+							<option value="41">North Carolina</option>
+							<option value="42">North Dakota</option>
+							<option value="43">Northern Mariana Islands</option>
+							<option value="44">Ohio</option>
+							<option value="45">Oklahoma</option>
+							<option value="46">Oregon</option>
+							<option value="47">Palau</option>
+							<option value="48">Pennsylvania</option>
+							<option value="49">Puerto Rico</option>
+							<option value="50">Rhode Island</option>
+							<option value="51">South Carolina</option>
+							<option value="52">South Dakota</option>
+							<option value="53">Tennessee</option>
+							<option value="54">Texas</option>
+							<option value="55">Utah</option>
+							<option value="56">Vermont</option>
+							<option value="57">Virgin Islands</option>
+							<option value="58">Virginia</option>
+							<option value="59">Washington</option>
+							<option value="60">West Virginia</option>
+							<option value="61">Wisconsin</option>
+							<option value="62">Wyoming</option>
+						</select>
+					</div>
+					<div class="selBtn">
+						<span>City：</span>
+						<select name="product_attribute_10" id="select_city" class="valid">
+							<option selected="selected" value="1630">This is a test for a long name city</option>
+							<option value="368">mxd</option>
+						</select>
+					</div>
+					<div style="clear:both"></div>
+					<div class="buttons" style="text-align: center;margin-top: 20px;margin-bottom: 15px;">
+						<input type="button" id="btn_SaveCityId" class="button-1 register-button" value="OK">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-search" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+						<h4 class="modal-title" id="myModalLabel"> Search </h4>
+					</div>
+					<div style="text-align:center;padding:10px 0;">
+						<div class="search-box store-search-box mobile search-box-mobile">
+							<form action="/search" id="small-search-box-form-mobile" method="get" novalidate="novalidate"> <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+								<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms-mobile" autocomplete="off" name="q" placeholder="Search store">
+								<input type="submit" class="button-1 search-box-button" value="Search">
+							</form>
+							<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+							<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-set" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+					</div>
+					<div class="modal-body" style="padding-top:0">
+						<div class="header-upper mobile">
+							<div class="header-selectors-wrapper">
+								<div class="language-selector">
+									<select id="customerlanguage" name="customerlanguage" onchange="setLocation(this.value);">
+										<option value="/changelanguage/8?returnurl=%2fnews">es-PE</option>
+										<option value="/changelanguage/9?returnurl=%2fnews"> español(España)</option>
+										<option selected="selected" value="/changelanguage/1?returnurl=%2fnews">English</option>
+										<option value="/changelanguage/2?returnurl=%2fnews">简体中文</option>
+										<option value="/changelanguage/4?returnurl=%2fnews">русский</option>
+									</select>
+								</div>
+							</div>
+							<div class="header-links-wrapper">
+								<div class="header-links">
+									<ul>
+										<li>
+											<a href="/register" class="ico-register">
+												<i class="iconfont icon-bussinessman"></i>Register
+											</a>
+										</li>
+										<li>
+											<a href="/login" class="ico-login">
+												<i class="iconfont icon-account"></i>Log in
+											</a>
+										</li>
+										<li>
+											<a href="/wishlist" class="ico-wishlist">
+												<i class="iconfont icon-favorite"></i>
+												<span class="wishlist-label">Wishlist</span>
+												<span class="wishlist-qty">(0)</span>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div class="master-wrapper-page">
+<div class="header">
+				<!--Topmenu begin-->
+				<div class="header-upper">
+					<div class="header-selectors-wrapper">
+						<div class="language-selector">
+							<select id="customerlanguage" name="customerlanguage" onchange="setLocation(this.value);">
+								<option value="/changelanguage/5?returnurl=%2fplatinum-kit">Deutsch</option>
+								<option value="/changelanguage/7?returnurl=%2fplatinum-kit">عربي/عربى</option>
+								<option selected="selected" value="/changelanguage/1?returnurl=%2fplatinum-kit">English</option>
+								<option value="/changelanguage/2?returnurl=%2fplatinum-kit">简体中文</option>
+								<option value="/changelanguage/4?returnurl=%2fplatinum-kit">русский</option>
+							</select>
+						</div>
+						<div class="peisong">
+							<i class="iconfont icon-truck" title="Delivery"></i>
+							<!--<span>  Delivery：</span>-->
+							<div class="textAddress">
+								<div title="United States>AE (Armed Forces Europe)>This is a test for a long name city">This is a test for a long name city</div><b></b></div>
+						</div>
+					</div>
+					<div class="header-links-wrapper">
+						<div class="header-links">
+							<ul>
+								<li>
+									<a href="注册.html"><i class="iconfont icon-bussinessman"></i>Register</a>
+								</li>
+								<li>
+									<a href="登录.html"><i class="iconfont icon-account"></i>Log in</a>
+								</li>
+								<li>
+									<a href="收藏.html"> <i class="iconfont icon-favorite"></i> <span class="wishlist-label">Wishlist</span> <span class="wishlist-qty">(0)</span> </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--topmenu end-->
+				<!--logo和配送地址-->
+				<div class="header-lower">
+					<div class="header-logo">
+						<a href="index.html"> <img title="" alt="Tiens Store" src="Content/images/logo.png"> </a>
+					</div>
+					<div class="search-box store-search-box">
+						<form action="/search" id="small-search-box-form" method="get" novalidate="novalidate">
+							<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+							<input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms" autocomplete="off" name="q" placeholder="Search store">
+							<input type="submit" class="button-1 search-box-button" value="Search">
+						</form>
+						<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"> </ul>
+					</div>
+					<div class="peisong mobile">
+						<i class="iconfont icon-truck" title="Delivery"></i>
+						<div class="textAddress">
+							<div id="div_homeAddress_mobile" title="Hungary>Budapest>All areas in Budapest">All areas in Budapest</div><b></b></div>
+					</div>
+				</div>
+				<!--Logo End-->
+			</div>    
+    <div id="myScrollspy">
+				<div class="header-menu affix-top">
+					<ul class="top-menu">
+						<li>
+							<a href="/personal-care"> Beauty </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/time-shadow"> TIME SHADOW® Facial Care </a>
+								</li>
+								<li>
+									<a href="/time-shadow-makeup"> TIME SHADOW® Makeup </a>
+								</li>
+								<li>
+									<a href="/toner"> Personal Care </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/body-care"> Body Care </a>
+										</li>
+										<li>
+											<a href="/mouth-care"> Mouth Care </a>
+										</li>
+										<li>
+											<a href="/female-care"> Female Care </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/milk"> Milk </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/spakare"> SPAKARE </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/perfume"> Perfume </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/homecare"> Homecare </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/wellness-equipment"> Wellness Equipment </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/fashion-luxury"> Fashion luxury </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/watch"> Watch </a>
+								</li>
+								<li>
+									<a href="/scarves"> Scarves </a>
+								</li>
+								<li>
+									<a href="/swimsuit"> Swimsuit </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/bikini"> BIKINI </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/promotional-products"> Promotional Products </a>
+						</li>
+						<li>
+							<a href="/multi-track-shop"> Multi-track Shop </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/platinum-kit"> Platinum Kit </a>
+								</li>
+								<li>
+									<a href="/gold-kit"> Gold Kit </a>
+								</li>
+								<li>
+									<a href="/silver-kit"> Silver Kit </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/about-us">About Us</a>
+						</li>
+					</ul>
+					<li id="topcartlink">
+						<a href="/cart"> <i class="iconfont icon-icon" style="font-size: 24px;color: #8A8A8A;"></i> <span class="cart-label">Shopping cart</span> <span class="cart-qty">(0)</span> </a>
+					</li>
+					<div id="flyout-cart" class="flyout-cart" style="align-content:center">
+						<div class="mini-shopping-cart">
+							<div class="count">
+								There are
+								<a href="/cart">3 item(s)</a> in your cart. </div>
+							<div class="items">
+								<div class="item first">
+									<div class="picture">
+										<a href="/tianshi-zinc-capsuleseng" title="Show details for Tianshi Zinc Capsules(ENG)">
+											<img alt="Picture of Tianshi Zinc Capsules(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/default-image_70.png" title="Show details for Tianshi Zinc Capsules(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-zinc-capsuleseng">Tianshi Zinc Capsules(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 101530.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="picture">
+										<a href="/tianshi-vitality-softgelseng" title="Show details for Tianshi Vitality Softgels(ENG)">
+											<img alt="Picture of Tianshi Vitality Softgels(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000415_tianshi-vitality-softgelseng_70.jpeg" title="Show details for Tianshi Vitality Softgels(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-vitality-softgelseng">Tianshi Vitality Softgels(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 230750.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="picture">
+										<a href="/tianshi-cordyceps-capsuleseng" title="Show details for Tianshi Cordyceps Capsules(ENG)">
+											<img alt="Picture of Tianshi Cordyceps Capsules(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000300_tianshi-cordyceps-capsuleseng_70.jpeg" title="Show details for Tianshi Cordyceps Capsules(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-cordyceps-capsuleseng">Tianshi Cordyceps Capsules(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 2600.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="totals">Total PV/BV: 370.00/308.00 </div>
+							<div class="totals">Sub-Total: <strong>PEN 334880.00</strong></div>
+							<div class="buttons">
+								<input type="button" value="Go to cart" class="button-1 cart-button" onclick="setLocation('/cart')">
+							</div>
+						</div>
+					</div>
+					<div class="nav-toggle"><span></span></div>
+					<ul class="top-menu mobile">
+						<li>
+							<a href="/personal-care"> Beauty </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/time-shadow"> TIME SHADOW® Facial Care </a>
+								</li>
+								<li>
+									<a href="/time-shadow-makeup"> TIME SHADOW® Makeup </a>
+								</li>
+								<li>
+									<a href="/toner"> Personal Care </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/body-care"> Body Care </a>
+										</li>
+										<li>
+											<a href="/mouth-care"> Mouth Care </a>
+										</li>
+										<li>
+											<a href="/female-care"> Female Care </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/milk"> Milk </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/spakare"> SPAKARE </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/perfume"> Perfume </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/homecare"> Homecare </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/wellness-equipment"> Wellness Equipment </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/fashion-luxury"> Fashion luxury </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/watch"> Watch </a>
+								</li>
+								<li>
+									<a href="/scarves"> Scarves </a>
+								</li>
+								<li>
+									<a href="/swimsuit"> Swimsuit </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/bikini"> BIKINI </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/promotional-products"> Promotional Products </a>
+						</li>
+						<li>
+							<a href="/multi-track-shop"> Multi-track Shop </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/platinum-kit"> Platinum Kit </a>
+								</li>
+								<li>
+									<a href="/gold-kit"> Gold Kit </a>
+								</li>
+								<li>
+									<a href="/silver-kit"> Silver Kit </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/about-us">About Us</a>
+						</li>
+					</ul>
+					<div class="menu-set" data-toggle="modal" data-target="#menu-set"></div>
+					<div class="menu-search" data-toggle="modal" data-target="#menu-search"></div>
+					<div class="menu-shopCar"><span>12</span></div>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							$('.nav-toggle').click(function() {
+								$(this).toggleClass("active");
+								$(this).siblings('.top-menu.mobile').slideToggle('slow');
+							});
+							$('.top-menu.mobile .sublist-toggle').click(function() {
+								$(this).siblings('.sublist').slideToggle('slow');
+							});
+						});
+					</script>
+				</div>
+			</div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".header-menu").affix({
+                offset: {
+                    top: 65
+                }
+            });
+        });
+    </script>
+
+    <div class="master-wrapper-content">
+        <!--Start of Tawk.to Script-->
+        
+        <!--End of Tawk.to Script-->
+        
+
+
+        
+    
+    <div class="breadcrumb">
+        <ul>
+            
+            <li>
+                <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="http://web.esp.tiens.com/" itemprop="url">
+                        <span itemprop="title">Home</span>
+                    </a>
+                </span>
+                <span class="delimiter">/</span>
+            </li>
+                <li>
+                    <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="http://web.esp.tiens.com/food-supplement" itemprop="url">
+                            <span itemprop="title">Food Supplement</span>
+                        </a>
+                    </span>
+                    <span class="delimiter">/</span>
+                </li>
+            <li>
+                <strong class="current-item">TIENS Cordyceps Capsules</strong>
+                
+                
+            </li>
+        </ul>
+    </div>
+
+
+            <script>
+            var addr = {};
+            addr.selectCounrtyUrl = '/SelectCountry';
+            addr.selectProvinceUrl = '/SelectProvince';
+            
+            addr.saveCityId = '/SaveSelectCity';
+        </script>
+        <div class="master-column-wrapper">
+            
+
+
+<div class="center-2">
+    
+    
+<!--product breadcrumb-->
+
+<div class="page product-details-page">
+    <div class="page-body">
+        
+<form action="http://web.esp.tiens.com/tiens-cordyceps-capsules" id="product-details-form" method="post" novalidate="novalidate">            <div itemscope="" itemtype="http://schema.org/Product" data-productid="1419">
+                <div class="product-essential">
+                    
+                    <!--product pictures-->
+                    
+<div class="gallery">
+    <div class="picture">
+            <img alt="Picture of TIENS Cordyceps Capsules" src="Content/images/0000344_cordyceps-tiens_550.jpeg" title="Picture of TIENS Cordyceps Capsules" itemprop="image" id="main-product-img-1419">
+    </div>
+    <div class="picture-thumbs-footer">
+        
+    <div class="product-share-button">
+        <div class="addthis_toolbox addthis_default_style addthis_20x20_style">
+        <a class="addthis_button_linkedin at300b" target="_blank" title="LinkedIn" href="http://web.esp.tiens.com/tiens-cordyceps-capsules#"><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px; background-color: rgb(0, 119, 181);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="LinkedIn" alt="LinkedIn" style="width: 20px; height: 20px;" class="at-icon at-icon-linkedin"><g><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z" fill-rule="evenodd"></path></g></svg></span></a>
+        <a class="addthis_button_twitter at300b" title="Tweet" href="http://web.esp.tiens.com/tiens-cordyceps-capsules#"><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px; background-color: rgb(29, 161, 242);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Twitter" alt="Twitter" style="width: 20px; height: 20px;" class="at-icon at-icon-twitter"><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></span></a>
+        <a class="addthis_button_facebook at300b" title="Facebook" href="http://web.esp.tiens.com/tiens-cordyceps-capsules#"><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px; background-color: rgb(59, 89, 152);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Facebook" alt="Facebook" style="width: 20px; height: 20px;" class="at-icon at-icon-facebook"><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></span></a>
+        <a class="addthis_button_google_plusone_share at300b" target="_blank" title="Google+" href="http://web.esp.tiens.com/tiens-cordyceps-capsules#"><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px; background-color: rgb(220, 78, 65);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Google+" alt="Google+" style="width: 20px; height: 20px;" class="at-icon at-icon-google_plusone_share"><g><path d="M12 15v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42s1.95-4.42 4.34-4.42c1.36 0 2.27.58 2.79 1.08l1.9-1.83C15.47 9.69 13.89 9 12 9c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H12zm15 0h-2v-2h-2v2h-2v2h2v2h2v-2h2v-2z" fill-rule="evenodd"></path></g></svg></span></a>
+        <a class="addthis_button_sinaweibo at300b" target="_blank" title="Sina Weibo" href="http://web.esp.tiens.com/tiens-cordyceps-capsules#"><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px; background-color: rgb(230, 22, 45);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Sina Weibo" alt="Sina Weibo" style="width: 20px; height: 20px;" class="at-icon at-icon-sinaweibo"><g><g fill-rule="evenodd"></g><path d="M14.24 23.808c-3.64.367-6.785-1.307-7.022-3.734-.236-2.43 2.525-4.693 6.164-5.06 3.642-.367 6.786 1.307 7.02 3.734.24 2.43-2.522 4.696-6.16 5.06m7.28-8.063c-.31-.096-.523-.157-.362-.57.352-.898.39-1.672.006-2.227-.713-1.036-2.667-.98-4.907-.028 0 0-.705.312-.523-.253.343-1.125.29-2.065-.243-2.61-1.214-1.238-4.446.045-7.216 2.86C6.205 15.023 5 17.26 5 19.192c0 3.694 4.664 5.942 9.226 5.942 5.98 0 9.96-3.53 9.96-6.333.003-1.695-1.402-2.657-2.665-3.055M25.494 8.983a5.76 5.76 0 0 0-5.542-1.823.855.855 0 0 0-.646 1.015.84.84 0 0 0 1 .657c1.398-.303 2.912.138 3.938 1.295a4.254 4.254 0 0 1 .865 4.113c-.144.45.1.93.542 1.076a.84.84 0 0 0 1.06-.55v-.002a5.973 5.973 0 0 0-1.218-5.78"></path><path d="M23.276 11.018a2.8 2.8 0 0 0-2.698-.885.74.74 0 0 0-.56.876c.086.396.472.65.86.563.467-.102.977.046 1.32.432.343.388.437.915.29 1.378a.742.742 0 0 0 .466.928.724.724 0 0 0 .913-.474c.3-.947.113-2.026-.59-2.818M14.44 19.41c-.126.223-.408.328-.627.235-.218-.09-.285-.34-.16-.555.127-.215.397-.32.612-.234.22.08.298.33.176.555m-1.16 1.512c-.353.57-1.11.82-1.676.558-.56-.26-.726-.922-.374-1.48.35-.555 1.078-.802 1.642-.56.57.25.753.905.407 1.482m1.322-4.04c-1.733-.46-3.69.42-4.443 1.97-.77 1.583-.025 3.34 1.723 3.914 1.815.595 3.95-.318 4.695-2.023.734-1.67-.182-3.39-1.976-3.86"></path></g></svg></span></a>
+        <a class="addthis_button_compact at300m" href="http://web.esp.tiens.com/tiens-cordyceps-capsules#"><span class="at-icon-wrapper" style="line-height: 20px; height: 20px; width: 20px; background-color: rgb(255, 101, 80);"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="More" alt="More" style="width: 20px; height: 20px;" class="at-icon at-icon-addthis"><g><path d="M18 14V8h-4v6H8v4h6v6h4v-6h6v-4h-6z" fill-rule="evenodd"></path></g></svg></span></a>
+<div class="atclear"></div></div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="Content/images/addthis_widget.js" async="async"></script>
+    </div>
+
+        <a href="http://web.esp.tiens.com/tiens-cordyceps-capsules#" class="shoucang" title="Add to wishlist" onclick="AjaxCart.addproducttocart_catalog(&#39;/addproducttocart/catalog/1419/2/1&#39;);return false;">Add to wishlist</a>
+    </div>
+</div>
+                    
+                    <div class="overview">
+                        
+                        <div class="product-name">
+                            <h1 itemprop="name">
+                                TIENS Cordyceps Capsules
+                            </h1>
+                        </div>
+                            <div class="short-description">
+                                Boosting natural defence, body functions and overall well-being.
+                            </div>
+                        
+                        <!--product reviews-->
+                        
+    <div class="product-reviews-overview">
+        <div class="product-review-box">
+            <div class="rating">
+                <div style="width: 0%">
+                </div>
+            </div>
+        </div>
+
+            <div class="product-no-reviews">
+                <a href="http://web.esp.tiens.com/productreviews/1419">Be the first to review this product</a>
+            </div>
+    </div>
+
+                        <!--manufacturers-->
+                        
+
+                        
+                        <div class="peisong">
+                            <span>  Delivery:</span>
+                            <div class="textAddress"><div id="div_productAddress" title="Spain&gt;Andalucía&gt;Andalucía">Andalucía</div><b></b></div>
+                        </div>
+                        <div style="clear:both"></div>
+
+                        <script>
+                            $(".textAddress").click(function () {
+                                $("#peisong").show();
+                                $("#peisong").parent().find(".sel").removeClass("sel");
+                                $(this).toggleClass("sel");
+                            });
+                            $(".close").click(function () {
+                                $("#peisong").hide();
+                            });
+                            var country = $("#select_country").find("option:selected").text();
+                            var province = $("#select_province").find("option:selected").text();
+                            var city = $("#select_city").find("option:selected").text();
+                            $("#div_productAddress").html(city).attr("title", country + '>' + province + '>' + city);
+                        </script>
+
+                        <!--availability-->
+                        
+                        <!--SKU, MAN, GTIN, vendor-->
+                        <div class="additional-details">
+    
+            </div>
+                        <!--delivery-->
+                        
+                        <!--sample download-->
+                        
+                        <!--attributes-->
+
+                        <!--gift card-->
+
+                        <!--rental info-->
+
+                        <!--price & add to cart-->
+
+    <div class="add-to-cart">
+                                    <div class="add-to-cart-panel">
+                <label class="qty-label" for="addtocart_1419_EnteredQuantity">Qty:</label>
+                    <a href="javascript:void(0)" class="min" id="qty_subtract"></a>
+<input class="qty-input" data-val="true" data-val-number="The field Qty must be a number." id="txt_qty" name="addtocart_1419.EnteredQuantity" type="text" value="1">                    <a href="javascript:void(0)" class="add" id="qty_add"></a>
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $("#addtocart_1419_EnteredQuantity").keydown(function (event) {
+                                if (event.keyCode == 13) {
+                                    $("#add-to-cart-button-1419").click();
+                                    return false;
+                                }
+                            });
+                        });
+                    </script>
+                 <input type="button" id="add-to-cart-button-1419" class="button-1  add-to-cart-button" value="Add to cart" data-toggle="modal" data-target="#proViewLayer" style="margin-left: 10px;">                     <a href="http://web.esp.tiens.com/multi-track-shop" class="abtnsim">To Joining Package Purchase</a>
+
+            </div>
+        
+    </div>
+
+<script>
+    $(function () {
+        $("#add-to-cart-button-1419").click(function () {
+            $("#proViewLayer").empty();
+            $.ajax({
+                url: '/CheckUserAddress',
+                type: 'GET',
+                success: function (result) {
+                    if (!result.IsSuccess)
+                        $(".textAddress").click();
+                    else {
+                        //var url = '/AddProductToCart-Details-New/1419?productId=' + 1419 + '&quantity=' + $("#txt_qty").val();
+                        var url = '/AddProductToCart-Details-New/1419?productId=' + 1419 + '&quantity=' + $("#txt_qty").val();
+                        AjaxCart.addproducttocart_details(url, '#product-details-form', 1);
+                    }
+                }
+            });
+        });
+
+        $("#qty_subtract").click(function () {
+            var qty = $("#txt_qty").val();
+            if (qty > 1)
+                qty--;
+
+            $("#txt_qty").val(qty);
+        });
+
+        $("#qty_add").click(function () {
+            var qty = $("#txt_qty").val();
+            qty++;
+            $("#txt_qty").val(qty);
+        });
+    });
+</script>
+                        <!--wishlist, compare, email a friend-->
+                        <div class="overview-buttons" style="display:none">
+                            
+    <div class="add-to-wishlist">
+        <input type="button" id="add-to-wishlist-button-1419" class="button-2 add-to-wishlist-button" value="Add to wishlist" data-productid="1419" onclick="AjaxCart.addproducttocart_details(&#39;/addproducttocart/details/1419/2&#39;, &#39;#product-details-form&#39;);return false;">
+    </div>
+
+                            
+
+                            
+                            
+                        </div>
+
+                        
+                    </div>
+                        <div class="full-description" itemprop="description">
+                            <p><strong>The properties of cordyceps, the 'miraculous fungus' Have Been Known in Chinese medicine since ancient times. The most recent scientific research confirms pointing to claims Numerous These qualities of Cordyceps sinesnsis That naturally boost defense, body functions and overall well-being.</strong></p>
+<p><em>Cordyceps sinesnsis</em> , or rather <em>Ophiocordyceps sinensis</em> - as this is the scientific name of the species since 2007, is Also known as caterpillar fungus cordyceps or simply. During the warm months is like any fungus grows, however in the winter the larvae of moth species Certain Become ITS host. To survive, the fungus kills the insect and then a mummifies, and feeds on it. Cordyceps is naturally present in Tibet and Nepal at altitudes Between three and five thousand meters above sea level.</p>
+<p>Discovered About one and a half thousand years ago by Himalayan shepherds, it Quickly found applications in Chinese herbal medicine mainly as an energizing, anti-aging agent That Prevents dementia, and physical Improves condition. Due to ITS scarcity and 'miraculous' properties'cordyceps Reached a very high price. In ancient China, only the imperial court and aristocracy Could Afford to use it. Nowadays, these 'miraculous fungi' are grown in bioreactors. The annual production is Counted in millions on tons, HENCE now everyone can benefit from ITS extraordinary qualities.</p>
+<p>This remarkable supplement produces Tiens using highly advanced biotechnology at the same time preserving the natural the contents of the preparation.</p>
+<p>&nbsp;</p>
+<h3 id="main-ingredients">MAIN INGREDIENTS</h3>
+<p>The main ingredients of cordyceps are cordycepin and adenosine - active substances in the fungus Whose presence Determines the quality of the cultivation. They can play a role in a wide spectrum of biological Processes, for instance in intercellular transport of energy. Other active ingredients are polysaccharides, cordycepic acid and vitamin A, B, C, E, 16 Among acids, superoxide dismutase (SOD) as well as zinc, selenium, magnesium, iron and potassium.</p>
+<p>&nbsp;</p>
+<h3 id="action">ACTION</h3>
+<ul>
+<li><strong>Enhances the body's overall resistance. *</strong></li>
+<li>Improves appetite, beneficial During convalescence.</li>
+<li><strong>Energises, Increases stamina, you reduce fatigue,</strong> Which can improve increase sports performance.</li>
+<li>Displays <strong>antiviral and antibacterial</strong> properties eg Against Staphylococcus aureus.</li>
+<li><strong>Helps balance blood sugar metabolism.</strong></li>
+<li><strong>Supports the respiratory system, lung efficiency and Especially oxygen utilization</strong> (ACCELERATES cell adaptation to low oxygen levels).</li>
+<li><strong>Enhances male potency.</strong></li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="dosing">DOSING</h3>
+<p>1 to 2 capsule of the preparation May be taken twice a day. The preparation Should be taken on an empty stomach Between meals with warm water.</p>
+<p>&nbsp;</p>
+<h3 id="recommendations">RECOMMENDATIONS</h3>
+<p>It is Important to Remember That cordyceps preparations to a large extent cause calcium to washout effect in the body, THUS it is recommended to take calcium supplements Simultaneously That can alleviate the calcium deficiencies.</p>
+<p>&nbsp;</p>
+<h3 id="important-note">IMPORTANT NOTE</h3>
+<p>The supplement is not to be used by pregnant women and breastfeeding mothers or children under 12 years of age. May disrupt the preparation Cordyceps action of some immunosuppressive drugs (medications Reducing the activity of the immune system used eg in transplant rejection prevention), Therefore remember to inform your Doctor About ITS use.</p>
+                        </div>
+                </div>
+                
+                <div class="product-collateral">
+                    
+                    
+                </div>
+                
+                
+            </div>
+</form>        
+    </div>
+</div>
+
+    
+</div>
+<div class="side-2">
+
+    <div class="block block-category-navigation">
+        <div class="title">
+            <strong>Categories</strong>
+        </div>
+        <div class="listbox">
+            <ul class="list">
+    <li class="active last">
+        <a href="http://web.esp.tiens.com/food-supplement">Food Supplement
+                 (13)        </a>
+
+    </li>
+    <li class="inactive">
+        <a href="http://web.esp.tiens.com/house-care">House Care
+                 (5)        </a>
+
+    </li>
+    <li class="inactive">
+        <a href="http://web.esp.tiens.com/personal-care-2">Personal Care
+                 (11)        </a>
+
+    </li>
+    <li class="inactive">
+        <a href="http://web.esp.tiens.com/device">Device
+                 (7)        </a>
+
+    </li>
+            </ul>
+        </div>
+    </div>
+    <div class="block block-recently-viewed-products">
+        <div class="title">
+            <strong>Recently viewed products</strong>
+        </div>
+        <div class="listbox">
+            <ul class="list">
+                    <li>
+                            <a class="product-picture" href="http://web.esp.tiens.com/tiens-nutrient-high-calcium-powder" title="Show details for TIENS Nutrient High Calcium Powder">
+                                <img alt="Picture of TIENS Nutrient High Calcium Powder" src="Content/images/0000370_super-calcio-en-polvo-tiens_64.jpeg" title="Show details for TIENS Nutrient High Calcium Powder">
+                            </a>
+                        <a class="product-name" href="http://web.esp.tiens.com/tiens-nutrient-high-calcium-powder">TIENS Nutrient High Calcium Powder</a>
+                    </li>
+                    <li>
+                            <a class="product-picture" href="http://web.esp.tiens.com/tiens-health-mattress" title="Show details for Tiens Health Mattress">
+                                <img alt="Picture of Tiens Health Mattress" src="Content/images/0000471_colchon-saludable-tiens_64.jpeg" title="Show details for Tiens Health Mattress">
+                            </a>
+                        <a class="product-name" href="http://web.esp.tiens.com/tiens-health-mattress">Tiens Health Mattress</a>
+                    </li>
+                    <li>
+                            <a class="product-picture" href="http://web.esp.tiens.com/tiens-kardi-junior-krill-gummies-for-kids" title="Show details for Tiens KARDI Junior Krill Gummies for Kids">
+                                <img alt="Picture of Tiens KARDI Junior Krill Gummies for Kids" src="Content/images/0000355_kardi-tiens-aceite-omega-3-para-ninos_64.jpeg" title="Show details for Tiens KARDI Junior Krill Gummies for Kids">
+                            </a>
+                        <a class="product-name" href="http://web.esp.tiens.com/tiens-kardi-junior-krill-gummies-for-kids">Tiens KARDI Junior Krill Gummies for Kids</a>
+                    </li>
+                    <li>
+                            <a class="product-picture" href="http://web.esp.tiens.com/tiens-cordyceps-capsules" title="Show details for TIENS Cordyceps Capsules">
+                                <img alt="Picture of TIENS Cordyceps Capsules" src="Content/images/0000344_cordyceps-tiens_64.jpeg" title="Show details for TIENS Cordyceps Capsules">
+                            </a>
+                        <a class="product-name" href="http://web.esp.tiens.com/tiens-cordyceps-capsules">TIENS Cordyceps Capsules</a>
+                    </li>
+                    <li class="last">
+                            <a class="product-picture" href="http://web.esp.tiens.com/tiens-ti-energy-bracelet-crystal-black-mens-edition" title="Show details for Ti- Energy Bracelet (Crystal Black Men&#39;s Edition)">
+                                <img alt="Picture of Ti- Energy Bracelet (Crystal Black Men&#39;s Edition)" src="Content/images/0000468_pulsera-ti-energetica-cristal-negro-de-caballero_64.png" title="Show details for Ti- Energy Bracelet (Crystal Black Men&#39;s Edition)">
+                            </a>
+                        <a class="product-name" href="http://web.esp.tiens.com/tiens-ti-energy-bracelet-crystal-black-mens-edition">Ti- Energy Bracelet (Crystal Black Men's Edition)</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+            
+        </div>
+        
+    </div>
+    <div class="footer">
+    <div class="footer-upper">
+        <div class="footer-block information">
+            <div class="title">
+                <strong>Information</strong>
+            </div>
+            <ul class="list">
+                                    <li><a href="http://web.esp.tiens.com/shipping-returns">Shipping &amp; returns</a></li>
+                    <li><a href="http://web.esp.tiens.com/privacy-notice">Privacy notice</a></li>
+                    <li><a href="http://web.esp.tiens.com/conditions-of-use">Conditions of Use</a></li>
+                    <li><a href="http://web.esp.tiens.com/tianshi-spain-sl">Legal Notice</a></li>
+                            </ul>
+        </div>
+        <div class="footer-block customer-service">
+            <div class="title">
+                <strong>Customer service</strong>
+            </div>
+            <ul class="list">
+                <li><a href="http://web.esp.tiens.com/search">Search</a> </li>
+                                                    <li><a href="http://web.esp.tiens.com/digitaldownloads">Downloads</a></li>
+                                                    <li><a href="http://web.esp.tiens.com/recentlyviewedproducts">Recently viewed products</a></li>
+                                                    <li><a href="http://web.esp.tiens.com/newproducts">New products</a></li>
+                            </ul>
+        </div>
+        <div class="footer-block my-account">
+            <div class="title">
+                <strong>My account</strong>
+            </div>
+            <ul class="list">
+ <li><a href="http://web.esp.tiens.com/CustomerInfo">My account</a></li>                 <li><a href="http://web.esp.tiens.com/order/history">Orders</a></li>
+                <li><a href="http://web.esp.tiens.com/customer/addresses">Addresses</a></li>
+                    <li><a href="http://web.esp.tiens.com/cart">Shopping cart</a></li>
+                                    <li><a href="http://web.esp.tiens.com/wishlist">Wishlist</a></li>
+                                            </ul>
+        </div>
+        <div class="footer-block follow-us">
+            <div class="social">
+                <div class="title">
+                    <strong>Follow us</strong>
+                </div>
+                <ul class="networks">
+                        <li class="facebook"><a href="http://web.esp.tiens.com/True" target="_blank">Facebook</a></li>
+                                            <li class="twitter"><a href="https://twitter.com/nopCommerce" target="_blank">Twitter</a></li>
+                                                                <li class="youtube"><a href="http://web.esp.tiens.com/False" target="_blank">YouTube</a></li>
+                                            <li class="google-plus"><a href="http://www.facebook.com/nopCommerce" target="_blank">Google+</a></li>
+                </ul>
+            </div>
+            <div class="newsletter">
+    <div class="title">
+        <strong>Newsletter</strong>
+    </div>
+    <div class="newsletter-subscribe" id="newsletter-subscribe-block">
+        <div class="newsletter-email">
+            <input class="newsletter-subscribe-text" id="newsletter-email" name="NewsletterEmail" placeholder="Enter your email here..." type="text" value="">
+            <input type="button" value="Subscribe" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button">
+        </div>
+        <div class="newsletter-validation">
+            <span id="subscribe-loading-progress" style="display: none;" class="please-wait">Wait...</span>
+            <span class="field-validation-valid" data-valmsg-for="NewsletterEmail" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="newsletter-result" id="newsletter-result-block"></div>
+    
+</div>
+
+        </div>
+    </div>
+    <div class="footer-lower">
+        <div class="footer-info">
+            <span class="footer-disclaimer">
+                Copyright © 2016 TIENS B2C. All rights reserved.
+                
+<span style="color:#eeeeee">
+    --172.16.163.124
+</span>
+
+            </span>
+    </div>
+    
+</div>
+
+</div>
+<</body></html>

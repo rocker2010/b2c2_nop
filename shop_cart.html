@@ -1,0 +1,1265 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<link href="Content/css/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/iconfont.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/styles.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/payment.css" rel="stylesheet" type="text/css">
+		<script src="Scripts/codex-fly.js" type="text/javascript"></script>
+		<script src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+		<script src="Scripts/jquery.scrollUp.min.js" type="text/javascript"></script>
+
+		<script>
+			$(document).ready(function() {
+				$('div.button-group-navigation a.btn').click(function() {
+					$('li a').removeClass("active");
+					$(this).addClass("active");
+					if($(this).attr('id') == "xianxiafukuan") {
+						$(".PaymentStyle").show();
+					} else {
+						$(".PaymentStyle").hide();
+					}
+					$("div.button-group-navigation input[type=radio]").attr("checked", "");
+					$(this).find('input[type=radio]').attr("checked", "checked");
+				});
+			});
+		</script>
+		<title>购物车</title>
+	</head>
+
+	<body data-spy="scroll" data-target="#myScrollspy">
+		<div id="peisong">
+			<div class="box">
+				<div>
+					<a href="javascript:" class="closed"></a>
+				</div>
+				<div class="login-page">
+					<p class="title"><b>Delivery：</b> Please select address </p>
+					<div class="selBtn">
+						<span> Country：</span>
+						<select name="product_attribute_10" id="select_country" class="valid">
+							<option selected="selected" value="1">United States</option>
+							<option value="35">Germany</option>
+							<option value="40">Hungary</option>
+							<option value="72">Spain</option>
+						</select>
+					</div>
+					<div class="selBtn">
+						<span>Province： </span>
+						<select name="product_attribute_10" id="select_province" class="valid">
+							<option selected="selected" value="2">AE (Armed Forces Europe)</option>
+							<option value="3">Alabama</option>
+							<option value="4">Alaska</option>
+							<option value="5">American Samoa</option>
+							<option value="6">AP (Armed Forces Pacific)</option>
+							<option value="8">Arkansas</option>
+							<option value="9">California</option>
+							<option value="11">Connecticut</option>
+							<option value="12">Delaware</option>
+							<option value="13">District of Columbia</option>
+							<option value="14">Federated States of Micronesia</option>
+							<option value="15">Florida</option>
+							<option value="16">Georgia</option>
+							<option value="17">Guam</option>
+							<option value="18">Hawaii</option>
+							<option value="19">Idaho</option>
+							<option value="20">Illinois</option>
+							<option value="21">Indiana</option>
+							<option value="22">Iowa</option>
+							<option value="23">Kansas</option>
+							<option value="24">Kentucky</option>
+							<option value="25">Louisiana</option>
+							<option value="26">Maine</option>
+							<option value="27">Marshall Islands</option>
+							<option value="28">Maryland</option>
+							<option value="29">Massachusetts</option>
+							<option value="30">Michigan</option>
+							<option value="31">Minnesota</option>
+							<option value="32">Mississippi</option>
+							<option value="33">Missouri</option>
+							<option value="34">Montana</option>
+							<option value="35">Nebraska</option>
+							<option value="36">Nevada</option>
+							<option value="37">New Hampshire</option>
+							<option value="38">New Jersey</option>
+							<option value="39">New Mexico</option>
+							<option value="40">New York</option>
+							<option value="41">North Carolina</option>
+							<option value="42">North Dakota</option>
+							<option value="43">Northern Mariana Islands</option>
+							<option value="44">Ohio</option>
+							<option value="45">Oklahoma</option>
+							<option value="46">Oregon</option>
+							<option value="47">Palau</option>
+							<option value="48">Pennsylvania</option>
+							<option value="49">Puerto Rico</option>
+							<option value="50">Rhode Island</option>
+							<option value="51">South Carolina</option>
+							<option value="52">South Dakota</option>
+							<option value="53">Tennessee</option>
+							<option value="54">Texas</option>
+							<option value="55">Utah</option>
+							<option value="56">Vermont</option>
+							<option value="57">Virgin Islands</option>
+							<option value="58">Virginia</option>
+							<option value="59">Washington</option>
+							<option value="60">West Virginia</option>
+							<option value="61">Wisconsin</option>
+							<option value="62">Wyoming</option>
+						</select>
+					</div>
+					<div class="selBtn">
+						<span>City：</span>
+						<select name="product_attribute_10" id="select_city" class="valid">
+							<option selected="selected" value="1630">This is a test for a long name city</option>
+							<option value="368">mxd</option>
+						</select>
+					</div>
+					<div style="clear:both"></div>
+					<div class="buttons" style="text-align: center;margin-top: 20px;margin-bottom: 15px;">
+						<input type="button" id="btn_SaveCityId" class="button-1 register-button" value="OK">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-search" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+						<h4 class="modal-title" id="myModalLabel"> Search </h4>
+					</div>
+					<div style="text-align:center;padding:10px 0;">
+						<div class="search-box store-search-box mobile search-box-mobile">
+							<form action="/search" id="small-search-box-form-mobile" method="get" novalidate="novalidate"> <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+								<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms-mobile" autocomplete="off" name="q" placeholder="Search store">
+								<input type="submit" class="button-1 search-box-button" value="Search">
+							</form>
+							<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+							<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-set" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+					</div>
+					<div class="modal-body" style="padding-top:0">
+						<div class="header-upper mobile">
+							<div class="header-selectors-wrapper">
+								<div class="language-selector">
+									<select id="customerlanguage" name="customerlanguage" onchange="setLocation(this.value);">
+										<option value="/changelanguage/8?returnurl=%2fnews">es-PE</option>
+										<option value="/changelanguage/9?returnurl=%2fnews"> español(España)</option>
+										<option selected="selected" value="/changelanguage/1?returnurl=%2fnews">English</option>
+										<option value="/changelanguage/2?returnurl=%2fnews">简体中文</option>
+										<option value="/changelanguage/4?returnurl=%2fnews">русский</option>
+									</select>
+								</div>
+							</div>
+							<div class="header-links-wrapper">
+								<div class="header-links">
+									<ul>
+										<li>
+											<a href="/register" class="ico-register">
+												<i class="iconfont icon-bussinessman"></i>Register
+											</a>
+										</li>
+										<li>
+											<a href="/login" class="ico-login">
+												<i class="iconfont icon-account"></i>Log in
+											</a>
+										</li>
+										<li>
+											<a href="/wishlist" class="ico-wishlist">
+												<i class="iconfont icon-favorite"></i>
+												<span class="wishlist-label">Wishlist</span>
+												<span class="wishlist-qty">(0)</span>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="viewOrder" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+						<h4 class="modal-title" id="myModalLabel"> 您的订单已创建 </h4>
+					</div>
+					<div style="padding:15px;" class="dingdan-page">
+						<div class="mb20 row" style=" line-height: 28px; padding: 0 15px 15px 15px; border-bottom: 1px solid #e5e5e5; ">
+							<p><label for="">Group订单编号：</label>HUGO00100004772</p>
+							<p><label for="">当前子单编号：</label>HU00100000004769</p>
+						</div>
+						<div class="clear tc mb20"><input type="submit" name="updatecart" value="+ 添加新子单" class="button white" onclick="javascript:window.open('group订单.html')"><input type="submit" name="updatecart" value="完成并支付" class="button" onclick="javascript:window.open('group订单-详情.html')"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="master-wrapper-page">
+			<div class="header">
+				<!--Topmenu begin-->
+				<div class="header-upper">
+					<div class="header-selectors-wrapper">
+						<div class="language-selector">
+							<select id="customerlanguage" name="customerlanguage" onchange="setLocation(this.value);">
+								<option value="/changelanguage/5?returnurl=%2fplatinum-kit">Deutsch</option>
+								<option value="/changelanguage/7?returnurl=%2fplatinum-kit">عربي/عربى</option>
+								<option selected="selected" value="/changelanguage/1?returnurl=%2fplatinum-kit">English</option>
+								<option value="/changelanguage/2?returnurl=%2fplatinum-kit">简体中文</option>
+								<option value="/changelanguage/4?returnurl=%2fplatinum-kit">русский</option>
+							</select>
+						</div>
+						<div class="peisong">
+							<i class="iconfont icon-truck" title="Delivery"></i>
+							<!--<span>  Delivery：</span>-->
+							<div class="textAddress">
+								<div title="United States>AE (Armed Forces Europe)>This is a test for a long name city">This is a test for a long name city</div><b></b></div>
+						</div>
+					</div>
+					<div class="header-links-wrapper">
+						<div class="header-links">
+							<ul>
+								<li>
+									<a href="注册.html"><i class="iconfont icon-bussinessman"></i>Register</a>
+								</li>
+								<li>
+									<a href="登录.html"><i class="iconfont icon-account"></i>Log in</a>
+								</li>
+								<li>
+									<a href="收藏.html"> <i class="iconfont icon-favorite"></i> <span class="wishlist-label">Wishlist</span> <span class="wishlist-qty">(0)</span> </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--topmenu end-->
+
+				<!--logo和配送地址-->
+				<div class="header-lower">
+					<div class="header-logo">
+						<a href="index.html"> <img title="" alt="Tiens Store" src="Content/images/logo.png"> </a>
+					</div>
+					<div class="search-box store-search-box">
+						<form action="/search" id="small-search-box-form" method="get" novalidate="novalidate">
+							<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+							<input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms" autocomplete="off" name="q" placeholder="Search store">
+							<input type="submit" class="button-1 search-box-button" value="Search">
+						</form>
+						<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"> </ul>
+					</div>
+					<div class="peisong mobile">
+						<i class="iconfont icon-truck" title="Delivery"></i>
+						<div class="textAddress">
+							<div id="div_homeAddress_mobile" title="Hungary>Budapest>All areas in Budapest">All areas in Budapest</div><b></b></div>
+					</div>
+				</div>
+				<!--Logo End-->
+			</div>
+			<div id="myScrollspy">
+				<div class="header-menu">
+					<ul class="top-menu">
+						<li>
+							<a href="/personal-care"> Beauty </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/time-shadow"> TIME SHADOW® Facial Care </a>
+								</li>
+								<li>
+									<a href="/time-shadow-makeup"> TIME SHADOW® Makeup </a>
+								</li>
+								<li>
+									<a href="/toner"> Personal Care </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/body-care"> Body Care </a>
+										</li>
+										<li>
+											<a href="/mouth-care"> Mouth Care </a>
+										</li>
+										<li>
+											<a href="/female-care"> Female Care </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/milk"> Milk </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/spakare"> SPAKARE </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/perfume"> Perfume </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/homecare"> Homecare </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/wellness-equipment"> Wellness Equipment </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/fashion-luxury"> Fashion luxury </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/watch"> Watch </a>
+								</li>
+								<li>
+									<a href="/scarves"> Scarves </a>
+								</li>
+								<li>
+									<a href="/swimsuit"> Swimsuit </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/bikini"> BIKINI </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/promotional-products"> Promotional Products </a>
+						</li>
+						<li>
+							<a href="/multi-track-shop"> Multi-track Shop </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/platinum-kit"> Platinum Kit </a>
+								</li>
+								<li>
+									<a href="/gold-kit"> Gold Kit </a>
+								</li>
+								<li>
+									<a href="/silver-kit"> Silver Kit </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/about-us">About Us</a>
+						</li>
+					</ul>
+					<li id="topcartlink">
+						<a class="cart_anchor" href="/cart"> <i class="iconfont icon-icon" style="font-size: 24px;color: #8A8A8A;"></i> <span class="cart-label">Shopping cart</span> <span class="cart-qty">(0)</span> </a>
+					</li>
+					<div id="flyout-cart" class="flyout-cart" style="align-content:center">
+						<div class="mini-shopping-cart">
+							<div class="count">
+								There are
+								<a href="/cart">3 item(s)</a> in your cart. </div>
+							<div class="items">
+								<div class="item first">
+									<div class="picture">
+										<a href="/tianshi-zinc-capsuleseng" title="Show details for Tianshi Zinc Capsules(ENG)">
+											<img alt="Picture of Tianshi Zinc Capsules(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/default-image_70.png" title="Show details for Tianshi Zinc Capsules(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-zinc-capsuleseng">Tianshi Zinc Capsules(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 101530.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="picture">
+										<a href="/tianshi-vitality-softgelseng" title="Show details for Tianshi Vitality Softgels(ENG)">
+											<img alt="Picture of Tianshi Vitality Softgels(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000415_tianshi-vitality-softgelseng_70.jpeg" title="Show details for Tianshi Vitality Softgels(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-vitality-softgelseng">Tianshi Vitality Softgels(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 230750.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="picture">
+										<a href="/tianshi-cordyceps-capsuleseng" title="Show details for Tianshi Cordyceps Capsules(ENG)">
+											<img alt="Picture of Tianshi Cordyceps Capsules(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000300_tianshi-cordyceps-capsuleseng_70.jpeg" title="Show details for Tianshi Cordyceps Capsules(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-cordyceps-capsuleseng">Tianshi Cordyceps Capsules(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 2600.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="totals">Total PV/BV: 370.00/308.00 </div>
+							<div class="totals">Sub-Total: <strong>PEN 334880.00</strong></div>
+							<div class="buttons">
+								<input type="button" value="Go to cart" class="button-1 cart-button" onclick="setLocation('/cart')">
+							</div>
+						</div>
+					</div>
+					<div class="nav-toggle"><span></span></div>
+					<ul class="top-menu mobile">
+						<li>
+							<a href="/personal-care"> Beauty </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/time-shadow"> TIME SHADOW® Facial Care </a>
+								</li>
+								<li>
+									<a href="/time-shadow-makeup"> TIME SHADOW® Makeup </a>
+								</li>
+								<li>
+									<a href="/toner"> Personal Care </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/body-care"> Body Care </a>
+										</li>
+										<li>
+											<a href="/mouth-care"> Mouth Care </a>
+										</li>
+										<li>
+											<a href="/female-care"> Female Care </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/milk"> Milk </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/spakare"> SPAKARE </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/perfume"> Perfume </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/homecare"> Homecare </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/wellness-equipment"> Wellness Equipment </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/fashion-luxury"> Fashion luxury </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/watch"> Watch </a>
+								</li>
+								<li>
+									<a href="/scarves"> Scarves </a>
+								</li>
+								<li>
+									<a href="/swimsuit"> Swimsuit </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/bikini"> BIKINI </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/promotional-products"> Promotional Products </a>
+						</li>
+						<li>
+							<a href="/multi-track-shop"> Multi-track Shop </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/platinum-kit"> Platinum Kit </a>
+								</li>
+								<li>
+									<a href="/gold-kit"> Gold Kit </a>
+								</li>
+								<li>
+									<a href="/silver-kit"> Silver Kit </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/about-us">About Us</a>
+						</li>
+
+					</ul>
+					<div class="menu-set" data-toggle="modal" data-target="#menu-set"></div>
+					<div class="menu-search" data-toggle="modal" data-target="#menu-search"></div>
+					<div class="menu-shopCar"><span>12</span></div>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							$('.nav-toggle').click(function() {
+								$(this).toggleClass("active");
+								$(this).siblings('.top-menu.mobile').slideToggle('slow');
+							});
+							$('.top-menu.mobile .sublist-toggle').click(function() {
+								$(this).siblings('.sublist').slideToggle('slow');
+							});
+						});
+					</script>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$(".header-menu").affix({
+						offset: {
+							top: 65
+						}
+					});
+				});
+			</script>
+			<!--面包屑导航-->
+			<div class="master-wrapper-content">
+				<div class="master-column-wrapper">
+					<div class="center-1">
+						<style>
+							.progress-indicator>li a:hover .bubble:after,
+							.progress-indicator>li a:hover .bubble:before {
+								background-color: #bbb;
+							}
+							
+							.progress-indicator>li a:hover .bubble {
+								background-color: #bbb;
+							}
+						</style>
+						<style>
+							.tooltip {
+								z-index: 0;
+							}
+						</style>
+
+						<div class="container_wizard">
+							<ul class="progress-indicator">
+
+								<li title="购物车" class="completed tooltip cart">
+									<a href="/cart">
+										<span class="bubble"></span>
+										<i class="fa fa-shopping-cart fa-2x"></i>
+									</a>
+								</li>
+								<li title="地址" class="tooltip  ">
+									<a>
+										<span class="bubble"></span>
+										<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li title="配送" class="tooltip  ">
+									<a>
+										<span class="bubble"></span>
+										<i class="fa fa-truck fa-2x" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li title="支付" class="tooltip  ">
+									<a>
+										<span class="bubble"></span>
+										<i class="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li title="确认" class="tooltip ">
+									<a>
+										<span class="bubble"></span>
+										<i class="fa fa-check-circle-o fa-2x" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li title="完成" class="tooltip ">
+									<span class="bubble"></span>
+									<i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+								</li>
+
+							</ul>
+						</div>
+
+						<div class="page shopping-cart-page dingdan-page">
+							<div class="page-title">
+								<!--增加的代购开始-->
+								<style type="text/css">
+									.daigou_box {
+										background: #f9f8e1;
+										border: 1px #ddd solid;
+										box-shadow: 3px 3px 3px #e6e6e6;
+										padding: 15px;
+										line-height: 25px;
+										width: 320px;
+										position: absolute;
+										right: 0;
+										top: 21px;
+										text-align: left;
+										border-top-width: 2px;
+										border-top-color: #d4d4d4;
+										z-index: 1;
+									}
+									
+									.daigou_box.hide {
+										display: none;
+									}
+									
+									.daigou_info {}
+									
+									.daigou_btn {
+										margin-left: 15px;
+									}
+									
+									.daigou_btn label {
+										margin-bottom: 0;
+									}
+									
+									.daigou_btn i {
+										margin-right: 5px;
+									}
+									
+									.title_action {
+										text-align: right;
+										position: relative;
+										margin: -21px -10px 0 -10px;
+									}
+									
+									@media only screen and (min-width: 1024px) {
+										.title_action {
+											position: absolute;
+											width: 100%;
+											bottom: 10px;
+										}
+									}
+									
+									.daigou_box p {
+										margin-bottom: 10px;
+									}
+									
+									.daigou_box p:last-child {
+										margin-bottom: 0;
+									}
+									
+									.daigou_box input {
+										height: 30px;
+										width: 100%;
+										padding: 0 10px;
+									}
+									
+									.daigou_box input[type="button"] {
+										box-sizing: border-box;
+										height: 40px;
+									}
+									
+									.daigou_box input[type="button"].s50 {
+										width: 50%;
+									}
+									
+									.daigou_box input[type="button"].active {
+										background: #ed6d1f;
+										color: #fff;
+										border: 3px #f9f8e1 solid;
+										border-right: 0;
+									}
+									
+									.daigou_box input[type="button"].error1 {
+										border: 3px #f9f8e1 solid;
+										border-left: 0;
+										color: #8a8a8a;
+									}
+								</style>
+								<h1>购物车</h1>
+								<div class="title_action">
+									<a href="javascript:void(0)" class="daigou_btn zigou"><label><input type="checkbox" checked="checked">自购</label></a>
+									<a href="javascript:void(0)" class="daigou_btn daigou"><label><input type="checkbox">代购</label></a>
+									<span id="daigouren" style="vertical-align: middle;display: none;padding-top: 2px;"><span style="color:#ccc"> | </span>代购人：<b class="text-info">454541254545</b>&nbsp;&nbsp;&nbsp;<b class="text-warning">疯狂夺金开发</b></span>
+									<div class="daigou_box hide">请输入代购人编号：
+										<p><input type="text" name="" id="" value="" /></p>
+										<p><input type="button" name="" id="" value="关闭" class="error1 s50"/><input type="button" name="" id="" value="确认输入" class="active s50" /></p>
+									</div>
+								</div>
+								<div class="peisong" style="text-align:left">
+									<i class="iconfont icon-truck body_icon " title="配送至"></i>
+									<a href="#select_popup" id="div_productAddress" title="匈牙利 > Budapest">Budapest</a>
+								</div>
+								<div style="clear:both"></div>
+								<script type="text/javascript">
+									$(function() {
+										$(".zigou input:checkbox").click(function() {
+											$('.zigou input').attr('checked', true);
+											$('.daigou input').attr('checked', false);
+											$('.daigou_box').addClass('hide');
+										});
+										$(".daigou input:checkbox").click(function() {
+											$('.daigou_box').toggleClass('hide');
+											$('.zigou input').attr('checked', false);
+											$('.daigou input').attr('checked', 'checked');
+										});
+										$(".daigou_box .error1").click(function() {
+											$('.daigou_box').addClass('hide');
+//											$('.daigou input').attr('checked', false);
+										})
+										$(".daigou_box .active").click(function() {
+											$("#daigouren").css("display","inline-block");
+										})
+									})
+								</script>
+							</div>
+							<blockquote class="font-yellow-casablanca" style=" margin-top:20px;border-color:#e8a035;">
+								<p class="f12" style=" font-size: 14px; margin-bottom: 5px; "><b>选择业绩挂靠店</b></p>
+								<select id="u439_input" class="mr5">
+									<option selected="" value="请选择分公司">请选择分公司</option>
+									<option value="Branch01（HU001）">Branch01（HU001）</option>
+									<option value="Branch02（HU002）">Branch02（HU002）</option>
+									<option value="Branch03（HU003）">Branch03（HU003）</option>
+								</select>
+								<select id="u442_input">
+									<option selected="" value="请选择专卖店">请选择专卖店</option>
+									<option value="Stockist01（HU001001）">Stockist01（HU001001）</option>
+									<option value="Stockist02（HU001002）">Stockist02（HU001002）</option>
+									<option value="Stockist03（HU001003）">Stockist03（HU001003）</option>
+									<option value="Stockist04（HU001004）">Stockist04（HU001004）</option>
+								</select>
+							</blockquote>
+							
+							<!--增加的完成-->
+							<div id="div_shoppingCart">
+
+								<div class="page dingdan-page">
+									<script>
+										$(function() {
+											$("#confirm_offline_desc").click(function(e) {
+												e.stopPropagation();
+												var dataUrl = '/Checkout/GetOfflineDescription?addressType=' + 1 + '&addressId=' + "0";
+
+												AjaxCart.offlinetopic_order(dataUrl, 9);
+											});
+										});
+									</script>
+									<form action="/cart" data-ajax="true" data-ajax-method="Post" data-ajax-success="success" id="form0" method="post" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="bhIGLzrDyfBq4Ucs2WZnDbX3wXQm4MA4jl8BKaOCrM4V8y6YZ8wOGVWtaZ1uVCwJFDUw-DmF_ilhXD8RNzdRak5Ys-5JX1fHGmcl6GqeQro0dcLu0">
+										<div class="mb20">
+											<table class="cart" id="tb_cart">
+												<colgroup>
+													<col width="1">
+													<col width="1">
+													<col width="1">
+													<col>
+													<col width="1">
+													<col width="1">
+													<col width="1">
+													<col width="1">
+												</colgroup>
+												<thead>
+													<tr>
+														<th class="remove-from-cart">
+															删除
+														</th>
+														<th class="sku">
+															商品库存单位（SKU）
+														</th>
+														<th class="product-picture">
+															图片
+														</th>
+														<th class="product">
+															商品
+														</th>
+														<th class="unit-price">
+															价格
+														</th>
+														<th class="unit-price">
+															PV/BV
+														</th>
+														<th class="quantity">
+															数量
+														</th>
+														<th class="subtotal">
+															小计
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="remove-from-cart">
+															<a class="remove" href="javascript:void(0)">删除</a>
+															<input type="checkbox" name="removefromcart" value="14792" style="display:none">
+														</td>
+														<td class="sku">
+															<label class="td-title">商品库存单位（SKU）:</label>
+															<span class="sku-number">DQ02H0192</span>
+														</td>
+														<td class="product-picture">
+															<a href="/tiens-acu-life-electro-acupuncture-apparatusidoc-01"><img alt="图片 Tiens ACU-LIFE Electro Acupuncture Apparatus(IDOC-01)" src="http://dev.static.tiens.com/group1/M00/0F/A5/wKgDG1lvMeSARKAkAAAH2Uh5n7Y87.jpeg" title="显示明细 Tiens ACU-LIFE Electro Acupuncture Apparatus(IDOC-01)"></a>
+														</td>
+														<td class="product">
+															<a href="/tiens-acu-life-electro-acupuncture-apparatusidoc-01" class="product-name">Tiens ACU-LIFE Electro Acupuncture Apparatus(IDOC-01)</a>
+
+														</td>
+														<td class="unit-price">
+															<label class="td-title">
+                                        价格:
+                                    </label>
+															<span class="product-unit-price">$480.00</span>
+														</td>
+														<td class="pv/bv">
+															<label class="td-title">
+                                            PV/BV:
+                                        </label>
+															<span class="product-unit-price">20.00/30.00</span>
+														</td>
+
+														<td class="quantity">
+															<label class="td-title">
+                                            数量:
+                                        </label>
+															<input name="itemquantity14792" type="text" value="2" class="qty-input" maxlength="3" onkeypress="return (event.keyCode >= 48 &amp;&amp; event.keyCode <= 57) || (event.which >= 48 &amp;&amp; event.which <= 57) || event.which == 8 || event.keyCode == 8;">
+														</td>
+
+														<td class="subtotal">
+															<label class="td-title">
+                                        小计:
+                                    </label>
+															<span class="product-subtotal">$960.00</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="remove-from-cart">
+															<a class="remove" href="javascript:void(0)">删除</a>
+															<input type="checkbox" name="removefromcart" value="14866" style="display:none">
+														</td>
+														<td class="sku">
+															<label class="td-title">商品库存单位（SKU）:</label>
+															<span class="sku-number">DM01W0038</span>
+														</td>
+														<td class="product-picture">
+															<a href="/new-aprotie-organics-cleansing-oil"><img alt="图片 New Aprotie Organics Cleansing Oil" src="http://dev.static.tiens.com/group1/M00/0E/7A/wKgDGVl6GZqAEd5EAAAD5Mse8Ws90.jpeg" title="显示明细 New Aprotie Organics Cleansing Oil"></a>
+														</td>
+														<td class="product">
+															<a href="/new-aprotie-organics-cleansing-oil" class="product-name">New Aprotie Organics Cleansing Oil</a>
+
+														</td>
+														<td class="unit-price">
+															<label class="td-title">
+                                        价格:
+                                    </label>
+															<span class="product-unit-price">$110.00</span>
+														</td>
+														<td class="pv/bv">
+															<label class="td-title">
+                                            PV/BV:
+                                        </label>
+															<span class="product-unit-price">50.00/60.00</span>
+														</td>
+
+														<td class="quantity">
+															<label class="td-title">
+                                            数量:
+                                        </label>
+															<input name="itemquantity14866" type="text" value="1" class="qty-input" maxlength="3" onkeypress="return (event.keyCode >= 48 &amp;&amp; event.keyCode <= 57) || (event.which >= 48 &amp;&amp; event.which <= 57) || event.which == 8 || event.keyCode == 8;">
+														</td>
+
+														<td class="subtotal">
+															<label class="td-title">
+                                        小计:
+                                    </label>
+															<span class="product-subtotal">$110.00</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="remove-from-cart">
+															<a class="remove" href="javascript:void(0)">删除</a>
+															<input type="checkbox" name="removefromcart" value="14867" style="display:none">
+														</td>
+														<td class="sku">
+															<label class="td-title">商品库存单位（SKU）:</label>
+															<span class="sku-number">DQ02H0190</span>
+														</td>
+														<td class="product-picture">
+															<a href="/tiens-source-of-health-hyper-h-health-cup"><img alt="图片 Tiens Source of Health Hyper-H Health Cup" src="http://dev.static.tiens.com/group1/M00/0E/9E/wKgDG1lSgCCACcuEAAAFXFobwqU58.jpeg" title="显示明细 Tiens Source of Health Hyper-H Health Cup"></a>
+														</td>
+														<td class="product">
+															<a href="/tiens-source-of-health-hyper-h-health-cup" class="product-name">Tiens Source of Health Hyper-H Health Cup</a>
+
+														</td>
+														<td class="unit-price">
+															<label class="td-title">
+                                        价格:
+                                    </label>
+															<span class="product-unit-price">$1,000.00</span>
+														</td>
+														<td class="pv/bv">
+															<label class="td-title">
+                                            PV/BV:
+                                        </label>
+															<span class="product-unit-price">600.00/600.00</span>
+														</td>
+
+														<td class="quantity">
+															<label class="td-title">
+                                            数量:
+                                        </label>
+															<input name="itemquantity14867" type="text" value="1" class="qty-input" maxlength="3" onkeypress="return (event.keyCode >= 48 &amp;&amp; event.keyCode <= 57) || (event.which >= 48 &amp;&amp; event.which <= 57) || event.which == 8 || event.keyCode == 8;">
+														</td>
+
+														<td class="subtotal">
+															<label class="td-title">
+                                        小计:
+                                    </label>
+															<span class="product-subtotal">$1,000.00</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="common-buttons">
+
+												<input type="submit" name="continueshopping" value="继续购物" class="button-2 continue-shopping-button">
+
+												<input type="submit" style="display:none" id="btnUpdateCart" name="updatecart" value="更新购物车" class="button-2 update-cart-button">
+											</div>
+										</div>
+										<div class="cart-options">
+										</div>
+										<div class="cart-footer">
+
+											<div class="cart-collaterals" style="display: none">
+												<div class="deals">
+													<div class="coupon-box">
+														<div class="title">
+															<strong>折扣码</strong>
+														</div>
+														<div class="hint">
+															在此输入您的折扣码
+														</div>
+														<div class="coupon-code">
+															<input name="discountcouponcode" type="text" class="discount-coupon-code">
+															<input type="submit" name="applydiscountcouponcode" value="使用折扣码" class="button-2 apply-discount-coupon-code-button">
+														</div>
+													</div>
+
+													<div class="giftcard-box">
+														<div class="title">
+															<strong>礼品卡</strong>
+														</div>
+														<div class="hint">在此输入礼品卡代码</div>
+														<div class="coupon-code">
+															<input name="giftcardcouponcode" type="text" class="gift-card-coupon-code">
+															<input type="submit" name="applygiftcardcouponcode" value="使用礼品卡" class="button-2 apply-gift-card-coupon-code-button">
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+											<div class="page-body shopping-cart-page">
+
+												<div class="CountDetails" id="div_orderTotal">
+
+													<div class="right f16">
+														<div class="tab-le-fill">
+															<div class="table-title">
+																<table class="table-fill">
+																	<tbody class="table-hover">
+																		<tr>
+																			<td class="text-left">总计:</td>
+																			<td class="text-left align">$2,070.00</td>
+																		</tr>
+																		<tr>
+																			<td class="text-left">不含税金额:</td>
+																			<td class="text-left align">$0.00<input type="hidden" id="SubTotalNetValue" value="0"> </td>
+																		</tr>
+																		<tr>
+																			<td class="text-left">
+																				配送:
+																			</td>
+																			<td class="text-left align">
+																				<span>在结帐时计算</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-left">总PV:</td>
+																			<td class="text-left align">690.00</td>
+																		</tr>
+																		<tr>
+																			<td class="text-left">总BV:</td>
+																			<td class="text-left align">720.00</td>
+																		</tr>
+
+																		<tr>
+																			<td class="text-left">实付款:</td>
+																			<td class="text-left align cr">
+																				<b class="cr">
+                                        <span>在结帐时计算</span>
+                                    <span style="display: none" id="span_orderTotal">0</span>
+                                </b>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="mb20" style="padding: 15px 10px; text-align: right;">
+
+													<script type="text/javascript">
+														$(document).ready(function() {
+															$('#checkout').click(function() {
+																var termOfServiceOk = true;
+																//one
+																if($('#termsofservice').length > 0) {
+																	if(!$('#termsofservice').is(':checked')) {
+																		$("#terms-of-service-warning-box").dialog();
+																		termOfServiceOk = false;
+																		return termOfServiceOk;
+																	} else {
+																		termOfServiceOk = true;
+																	}
+																}
+																//two
+																if($('#termsofserviceTwo').length > 0) {
+																	if(!$('#termsofserviceTwo').is(':checked')) {
+																		$("#terms-of-service-warning-boxTwo").dialog();
+																		termOfServiceOk = false;
+																		return termOfServiceOk;
+																	} else {
+																		termOfServiceOk = true;
+																	}
+																}
+																//Three
+																if($('#termsofserviceThree').length > 0) {
+																	if(!$('#termsofserviceThree').is(':checked')) {
+																		$("#terms-of-service-warning-boxThree").dialog();
+																		termOfServiceOk = false;
+																		return termOfServiceOk;
+																	} else {
+																		termOfServiceOk = true;
+																	}
+																}
+																return termOfServiceOk;
+															});
+														});
+													</script>
+													<button type="submit" id="checkout" name="checkout" value="checkout" class="button-1 checkout-button">
+                                订单结算
+                            </button>
+
+													<div class="addon-buttons">
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+
+								<script type="text/javascript">
+									$(function() {
+										//购物车的删除按钮动作
+										$("#div_shoppingCart td").delegate("a.remove", "click", function() {
+											var $t = $(this);
+											var productName = $t.parent("td").nextAll("td").find("a.product-name").text();
+											var msg = '你确认删除 "{0}"?'.format(productName);
+											swal({
+												title: "",
+												text: msg,
+												type: "warning",
+												showCancelButton: true,
+												closeOnConfirm: false,
+												showLoaderOnConfirm: true,
+												confirmButtonText: strOk,
+												cancelButtonText: "取消"
+											}, function(inputValue) {
+												if(inputValue == true) {
+													$t.next("input[type=checkbox]").attr("checked", true);
+													$("#btnUpdateCart").click();
+												}
+											});
+										});
+
+										$("#div_shoppingCart td.quantity").delegate("select", "change", function() {
+												$("#btnUpdateCart").click();
+											})
+											.delegate("input[type=text].qty-input", "focus", function() {
+												$(this).data("oldqty", $(this).val());
+											})
+											.delegate("input[type=text].qty-input", "blur", function() {
+												var qty = $(this).val();
+												var oldQty = $(this).data("oldqty");
+												if(IsNumber(qty) && oldQty != qty) {
+													$("#btnUpdateCart").click();
+												}
+											});
+									});
+
+									function success(data) {
+										if(layer != null) layer.closeAll();
+										if(swal != null) swal.close();
+
+										if(data.IsSuccess == false && data.Message != null && data.Message.length > 0) {
+											alert(data.Message);
+											if(data.Data.length > 0) {
+												$("#div_shoppingCart").html(data.Data);
+											}
+										} else {
+											if(data.Url != null && data.Url.length > 0) {
+												location.href = data.Url;
+											} else {
+												$("#div_shoppingCart").html(data.Data);
+											}
+										}
+									}
+								</script>
+
+							</div>
+						</div>
+					</div>
+					<div style="clear:both"></div>
+					<div class="footer">
+						<div class="footer-upper">
+							<div class="footer-block information">
+								<div class="title"> <strong>Information</strong> </div>
+								<ul class="list">
+									<li>
+										<a href="/sitemap">Sitemap</a>
+									</li>
+									<li>
+										<a href="/shipping-returns">Shipping &amp; returns</a>
+									</li>
+									<li>
+										<a href="/business-opportunity">Business Opportunity</a>
+									</li>
+									<li>
+										<a href="/about-us">About TIENS</a>
+									</li>
+									<li>
+										<a href="/privacy-notice">Privacy notice</a>
+									</li>
+									<li>
+										<a href="/conditions-of-use">Conditions of Use</a>
+									</li>
+									<li>
+										<a href="/contactus">Contact us</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-block customer-service">
+								<div class="title"> <strong>Customer service</strong> </div>
+								<ul class="list">
+									<li>
+										<a href="/search">Search</a>
+									</li>
+									<li>
+										<a href="/news">News</a>
+									</li>
+									<li>
+										<a href="/blog">Blog</a>
+									</li>
+									<li>
+										<a href="/digitaldownloads">Digital Downloads</a>
+									</li>
+									<li>
+										<a href="/boards">Forums</a>
+									</li>
+									<li>
+										<a href="/recentlyviewedproducts">Recently viewed products</a>
+									</li>
+									<li>
+										<a href="/newproducts">New products</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-block my-account">
+								<div class="title"> <strong>My account</strong> </div>
+								<ul class="list">
+									<li>
+										<a href="/CustomerInfo">My account</a>
+									</li>
+									<li>
+										<a href="/order/history">Orders</a>
+									</li>
+									<li>
+										<a href="/customer/addresses">Addresses</a>
+									</li>
+									<li>
+										<a href="/cart">Shopping cart</a>
+									</li>
+									<li>
+										<a href="/wishlist">Wishlist</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-block follow-us">
+								<div class="social">
+									<div class="title"> <strong>Follow us</strong> </div>
+									<ul class="networks">
+										<li class="facebook">
+											<a href="True" target="_blank">Facebook</a>
+										</li>
+										<li class="twitter">
+											<a href="https://twitter.com/nopCommerce" target="_blank">Twitter</a>
+										</li>
+										<li class="rss">
+											<a href="/news/rss/1">RSS</a>
+										</li>
+										<li class="youtube">
+											<a href="False" target="_blank">YouTube</a>
+										</li>
+										<li class="google-plus">
+											<a href="http://www.facebook.com/nopCommerce" target="_blank">Google+</a>
+										</li>
+									</ul>
+								</div>
+								<div class="newsletter">
+									<div class="title"> <strong>Newsletter</strong> </div>
+									<div class="newsletter-subscribe" id="newsletter-subscribe-block">
+										<div class="newsletter-email">
+											<input class="newsletter-subscribe-text" id="newsletter-email" name="NewsletterEmail" placeholder="Enter your email here..." type="text" value="">
+											<input type="button" value="Subscribe" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button">
+										</div>
+										<div class="newsletter-validation"> <span id="subscribe-loading-progress" style="display: none;" class="please-wait">Wait...</span> <span class="field-validation-valid" data-valmsg-for="NewsletterEmail" data-valmsg-replace="true"></span> </div>
+									</div>
+									<div class="newsletter-result" id="newsletter-result-block"></div>
+								</div>
+							</div>
+						</div>
+						<div class="footer-lower">
+							<div class="footer-info"> <span class="footer-disclaimer"> Copyright © 2016 TIENS B2C. All rights reserved. <span> --192.168.2.130 </span> </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$(function() {
+						$.scrollUp();
+					});
+				</script>
+	</body>
+
+</html>

@@ -1,0 +1,255 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<style>
+body {
+}
+ul li {
+}
+</style>
+<link href="Content/css/styles.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.10.2.min.js"></script>
+<script src="jquery.easytabs.js"></script>
+<title>步骤切换</title>
+</head>
+<div class="panel" id="nav-tabs">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#description" data-toggle="tab"><span>1</span>Description</a></li>
+    <li class=""><a href="#specification" data-toggle="tab"><span>2</span>Specification</a></li>
+    <li class=""><a href="#tags" data-toggle="tab"><span>3</span>Tags</a></li>
+  </ul>
+  <div class="tab-content" id="description">
+    <div class="full-description">
+      <div class="product-selectors">
+        <div class="product-viewmode"><span>浏览为</span><a class="viewmode-icon grid " href="http://dev.b2c3.tiens.com/轻松家居?viewmode=grid" title="网格">网格</a><a class="viewmode-icon list selected" href="http://dev.b2c3.tiens.com/轻松家居?viewmode=list" title="列表">列表</a></div>
+        <div class="product-sorting"><span>排序由</span>
+          <select id="products-orderby" name="products-orderby" onchange="setLocation(this.value);">
+            <option selected="selected" value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;orderby=0">默认</option>
+            <option value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;orderby=5">名称: A 到 Z</option>
+            <option value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;orderby=6">名称: Z 到 A</option>
+            <option value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;orderby=10">价格: 从低到高</option>
+            <option value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;orderby=11">价格: 从高到低</option>
+            <option value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;orderby=15">创建日期</option>
+          </select>
+        </div>
+        <div class="product-page-size"><span>显示</span>
+          <select id="products-pagesize" name="products-pagesize" onchange="setLocation(this.value);">
+            <option value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;pagesize=4">4</option>
+            <option selected="selected" value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;pagesize=8">8</option>
+            <option value="http://dev.b2c3.tiens.com/轻松家居?viewmode=list&amp;pagesize=12">12</option>
+          </select>
+          <span>每页</span></div>
+      </div>
+      <div style="margin-top:-10px; margin-bottom:30px;">
+        <div class="peisong"><span>配送至：</span>
+          <div class="text">
+            <div id="div_productAddress" title="China>江西省>九江市">九江市</div>
+            <b></b></div>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      <script>
+            $(".text").click(function () {
+                $("#peisong").show();
+                $("#peisong").parent().find(".sel").removeClass("sel");
+                $(this).toggleClass("sel");
+            });
+            $(".close").click(function () {
+                $("#peisong").hide();
+            });
+            var country = $("#select_country").find("option:selected").text();
+            var province = $("#select_province").find("option:selected").text();
+            var city = $("#select_city").find("option:selected").text();
+            $("#div_productAddress").html(city).attr("title", country + '>' + province + '>' + city);
+        </script>
+      <div class="product-list">
+        <div class="item-grid">
+          <div class="item-box">
+            <div class="product-item" data-productid="57">
+              <div class="picture"><a href="/blood-circulative-massager-cs2000" title="显示明细 Blood Circulative Massager CS2000"><img alt="图片 Blood Circulative Massager CS2000" data-src="http://dev.b2c3.tiens.com/content/images/thumbs/0000121_blood-circulative-massager-cs2000_415.jpeg" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000121_blood-circulative-massager-cs2000_415.jpeg" style="background:url('/Content/Images/busy.gif') no-repeat center;" title="显示明细 Blood Circulative Massager CS2000"></a></div>
+              <div class="details qidong">
+                <h2 class="product-title"><a href="/blood-circulative-massager-cs2000">Blood Circulative Massager CS2000</a></h2>
+                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus，Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus——此部分为产品简短说明</div>
+                <div class="tier-prices">
+                  <div class="title"><strong>该启动包含有如下产品:</strong></div>
+                  <div class="table-wrapper">
+                    <table class="prices-table">
+                      <tbody>
+                        <tr>
+                          <td>SKU</td>
+                          <td class="item-quantity">商品名称</td>
+                          <td class="item-quantity">数量</td>
+                        </tr>
+                        <tr>
+                          <td>SP01A0352</td>
+                          <td>天狮牌甲壳质胶囊</td>
+                          <td class="item-price">2</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="additional-details">
+                  <div class="sku"><span class="label">商品库存单位（SKU）:</span><span class="value" itemprop="sku" id="sku-54">DR01W0013</span></div>
+                </div>
+                <div class="prices"><span class="price actual-price">￥21.60</span>
+                  
+                  <!--pvbv-->
+                  <div class="pvbv"><span>积分3:</span><span style="color:#4cac26;"><b>49.00</b></span><span style="margin-left: 15px;">积分3:</span><span style="color:#4cac26;"><b>48.00</b></span></div>
+                  
+                  <!--qty-->
+                  <span class="qh">库存:有货</span></div>
+                <div class="buttons">
+                  <input type="button" value="加入购物车" class="button-2 product-box-add-to-cart-button" onClick="AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/49/1/1');return false;">
+                  <input type="button" value="加入收藏夹" title="加入收藏夹" class="button-2 add-to-wishlist-button" onClick="AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/49/2/1');return false;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-box">
+            <div class="product-item" data-productid="57">
+              <div class="picture"><a href="/blood-circulative-massager-cs2000" title="显示明细 Blood Circulative Massager CS2000"><img alt="图片 Blood Circulative Massager CS2000" data-src="http://dev.b2c3.tiens.com/content/images/thumbs/0000121_blood-circulative-massager-cs2000_415.jpeg" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000121_blood-circulative-massager-cs2000_415.jpeg" style="background:url('/Content/Images/busy.gif') no-repeat center;" title="显示明细 Blood Circulative Massager CS2000"></a></div>
+              <div class="details qidong">
+                <h2 class="product-title"><a href="/blood-circulative-massager-cs2000">Blood Circulative Massager CS2000</a></h2>
+                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus，Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus——此部分为产品简短说明</div>
+                <div class="tier-prices">
+                  <div class="title"><strong>该启动包含有如下产品:</strong></div>
+                  <div class="table-wrapper">
+                    <table class="prices-table">
+                      <tbody>
+                        <tr>
+                          <td>SKU</td>
+                          <td class="item-quantity">商品名称</td>
+                          <td class="item-quantity">数量</td>
+                        </tr>
+                        <tr>
+                          <td>SP01A0352</td>
+                          <td>天狮牌甲壳质胶囊</td>
+                          <td class="item-price">2</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="additional-details">
+                  <div class="sku"><span class="label">商品库存单位（SKU）:</span><span class="value" itemprop="sku" id="sku-54">DR01W0013</span></div>
+                </div>
+                <div class="prices"><span class="price actual-price">￥21.60</span>
+                  
+                  <!--pvbv-->
+                  <div class="pvbv"><span>积分3:</span><span style="color:#4cac26;"><b>49.00</b></span><span style="margin-left: 15px;">积分3:</span><span style="color:#4cac26;"><b>48.00</b></span></div>
+                  
+                  <!--qty-->
+                  <span class="qh">库存:有货</span></div>
+                <div class="buttons">
+                  <input type="button" value="加入购物车" class="button-2 product-box-add-to-cart-button" onClick="AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/49/1/1');return false;">
+                  <input type="button" value="加入收藏夹" title="加入收藏夹" class="button-2 add-to-wishlist-button" onClick="AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/49/2/1');return false;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-box">
+            <div class="product-item" data-productid="57">
+              <div class="picture"><a href="/blood-circulative-massager-cs2000" title="显示明细 Blood Circulative Massager CS2000"><img alt="图片 Blood Circulative Massager CS2000" data-src="http://dev.b2c3.tiens.com/content/images/thumbs/0000121_blood-circulative-massager-cs2000_415.jpeg" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000121_blood-circulative-massager-cs2000_415.jpeg" style="background:url('/Content/Images/busy.gif') no-repeat center;" title="显示明细 Blood Circulative Massager CS2000"></a></div>
+              <div class="details qidong">
+                <h2 class="product-title"><a href="/blood-circulative-massager-cs2000">Blood Circulative Massager CS2000</a></h2>
+                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus，Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus——此部分为产品简短说明</div>
+                <div class="tier-prices">
+                  <div class="title"><strong>该启动包含有如下产品:</strong></div>
+                  <div class="table-wrapper">
+                    <table class="prices-table">
+                      <tbody>
+                        <tr>
+                          <td>SKU</td>
+                          <td class="item-quantity">商品名称</td>
+                          <td class="item-quantity">数量</td>
+                        </tr>
+                        <tr>
+                          <td>SP01A0352</td>
+                          <td>天狮牌甲壳质胶囊</td>
+                          <td class="item-price">2</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="additional-details">
+                  <div class="sku"><span class="label">商品库存单位（SKU）:</span><span class="value" itemprop="sku" id="sku-54">DR01W0013</span></div>
+                </div>
+                <div class="prices"><span class="price actual-price">￥21.60</span>
+                  
+                  <!--pvbv-->
+                  <div class="pvbv"><span>积分3:</span><span style="color:#4cac26;"><b>49.00</b></span><span style="margin-left: 15px;">积分3:</span><span style="color:#4cac26;"><b>48.00</b></span></div>
+                  
+                  <!--qty-->
+                  <span class="qh">库存:有货</span></div>
+                <div class="buttons">
+                  <input type="button" value="加入购物车" class="button-2 product-box-add-to-cart-button" onClick="AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/49/1/1');return false;">
+                  <input type="button" value="加入收藏夹" title="加入收藏夹" class="button-2 add-to-wishlist-button" onClick="AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/49/2/1');return false;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-box">
+            <div class="product-item" data-productid="57">
+              <div class="picture"><a href="/blood-circulative-massager-cs2000" title="显示明细 Blood Circulative Massager CS2000"><img alt="图片 Blood Circulative Massager CS2000" data-src="http://dev.b2c3.tiens.com/content/images/thumbs/0000121_blood-circulative-massager-cs2000_415.jpeg" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000121_blood-circulative-massager-cs2000_415.jpeg" style="background:url('/Content/Images/busy.gif') no-repeat center;" title="显示明细 Blood Circulative Massager CS2000"></a></div>
+              <div class="details qidong">
+                <h2 class="product-title"><a href="/blood-circulative-massager-cs2000">Blood Circulative Massager CS2000</a></h2>
+                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus，Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus——此部分为产品简短说明</div>
+                <div class="tier-prices">
+                  <div class="title"><strong>该启动包含有如下产品:</strong></div>
+                  <div class="table-wrapper">
+                    <table class="prices-table">
+                      <tbody>
+                        <tr>
+                          <td>SKU</td>
+                          <td class="item-quantity">商品名称</td>
+                          <td class="item-quantity">数量</td>
+                        </tr>
+                        <tr>
+                          <td>SP01A0352</td>
+                          <td>天狮牌甲壳质胶囊</td>
+                          <td class="item-price">2</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="additional-details">
+                  <div class="sku"><span class="label">商品库存单位（SKU）:</span><span class="value" itemprop="sku" id="sku-54">DR01W0013</span></div>
+                </div>
+                <div class="prices"><span class="price actual-price">￥21.60</span>
+                  
+                  <!--pvbv-->
+                  <div class="pvbv"><span>积分3:</span><span style="color:#4cac26;"><b>49.00</b></span><span style="margin-left: 15px;">积分3:</span><span style="color:#4cac26;"><b>48.00</b></span></div>
+                  
+                  <!--qty-->
+                  <span class="qh">库存:有货</span></div>
+                <div class="buttons">
+                  <input type="button" value="加入购物车" class="button-2 product-box-add-to-cart-button" onClick="AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/49/1/1');return false;">
+                  <input type="button" value="加入收藏夹" title="加入收藏夹" class="button-2 add-to-wishlist-button" onClick="AjaxCart.addproducttocart_catalog('/addproducttocart/catalog/49/2/1');return false;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content" id="specification">
+    <div class="full-description">这是步骤内容二</div>
+  </div>
+  <div class="tab-content" id="tags">
+    <div class="full-description">这是步骤内容三</div>
+  </div>
+</div>
+<script>
+$(function () {
+	$('#nav-tabs').easytabs();
+	});
+</script>
+<body>
+</body>
+</html>

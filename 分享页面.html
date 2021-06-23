@@ -1,0 +1,736 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<!--[if lt IE 9]>
+        <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+		<link href="http://dev.b2c3.tiens.com/Content/Install/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/styles.css" rel="stylesheet" type="text/css">
+		<link href="Content/css/iconfont.css" rel="stylesheet" type="text/css">
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="http://dev.b2c3.tiens.com/Scripts/bootstrap.min.js" type="text/javascript"></script>
+		<script src="Scripts/jquery.scrollUp.min.js" type="text/javascript"></script>
+		<script src="Scripts/public.address.js" type="text/javascript"></script>
+		<script src="Scripts/codex-fly.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.product-box-add-to-cart-button,.add-to-cart-button').click(function() {
+					var display = $('#topcartlink').css('display');
+					var itemImg = $(this).parents(".product-item,.product-essential").find("img").eq(0);
+					if(display == 'none') {
+						flyToElement($(itemImg), $('.menu-shopCar'));
+					} else {
+						flyToElement($(itemImg), $('#topcartlink'));
+					}
+				});
+			});
+		</script>
+		<title>分享页</title>
+	</head>
+
+	<body data-spy="scroll" data-target="#myScrollspy">
+		<div id="peisong">
+			<div class="box">
+				<div>
+					<a href="javascript:" class="closed"></a>
+				</div>
+				<div class="login-page">
+					<p class="title"><b>Delivery：</b> Please select address </p>
+					<div class="selBtn">
+						<span> Country：</span>
+						<select name="product_attribute_10" id="select_country" class="valid">
+							<option selected="selected" value="1">United States</option>
+							<option value="35">Germany</option>
+							<option value="40">Hungary</option>
+							<option value="72">Spain</option>
+						</select>
+					</div>
+					<div class="selBtn">
+						<span>Province： </span>
+						<select name="product_attribute_10" id="select_province" class="valid">
+							<option selected="selected" value="2">AE (Armed Forces Europe)</option>
+							<option value="3">Alabama</option>
+							<option value="4">Alaska</option>
+							<option value="5">American Samoa</option>
+							<option value="6">AP (Armed Forces Pacific)</option>
+							<option value="8">Arkansas</option>
+							<option value="9">California</option>
+							<option value="11">Connecticut</option>
+							<option value="12">Delaware</option>
+							<option value="13">District of Columbia</option>
+							<option value="14">Federated States of Micronesia</option>
+							<option value="15">Florida</option>
+							<option value="16">Georgia</option>
+							<option value="17">Guam</option>
+							<option value="18">Hawaii</option>
+							<option value="19">Idaho</option>
+							<option value="20">Illinois</option>
+							<option value="21">Indiana</option>
+							<option value="22">Iowa</option>
+							<option value="23">Kansas</option>
+							<option value="24">Kentucky</option>
+							<option value="25">Louisiana</option>
+							<option value="26">Maine</option>
+							<option value="27">Marshall Islands</option>
+							<option value="28">Maryland</option>
+							<option value="29">Massachusetts</option>
+							<option value="30">Michigan</option>
+							<option value="31">Minnesota</option>
+							<option value="32">Mississippi</option>
+							<option value="33">Missouri</option>
+							<option value="34">Montana</option>
+							<option value="35">Nebraska</option>
+							<option value="36">Nevada</option>
+							<option value="37">New Hampshire</option>
+							<option value="38">New Jersey</option>
+							<option value="39">New Mexico</option>
+							<option value="40">New York</option>
+							<option value="41">North Carolina</option>
+							<option value="42">North Dakota</option>
+							<option value="43">Northern Mariana Islands</option>
+							<option value="44">Ohio</option>
+							<option value="45">Oklahoma</option>
+							<option value="46">Oregon</option>
+							<option value="47">Palau</option>
+							<option value="48">Pennsylvania</option>
+							<option value="49">Puerto Rico</option>
+							<option value="50">Rhode Island</option>
+							<option value="51">South Carolina</option>
+							<option value="52">South Dakota</option>
+							<option value="53">Tennessee</option>
+							<option value="54">Texas</option>
+							<option value="55">Utah</option>
+							<option value="56">Vermont</option>
+							<option value="57">Virgin Islands</option>
+							<option value="58">Virginia</option>
+							<option value="59">Washington</option>
+							<option value="60">West Virginia</option>
+							<option value="61">Wisconsin</option>
+							<option value="62">Wyoming</option>
+						</select>
+					</div>
+					<div class="selBtn">
+						<span>City：</span>
+						<select name="product_attribute_10" id="select_city" class="valid">
+							<option selected="selected" value="1630">This is a test for a long name city</option>
+							<option value="368">mxd</option>
+						</select>
+					</div>
+					<div style="clear:both"></div>
+					<div class="buttons" style="text-align: center;margin-top: 20px;margin-bottom: 15px;">
+						<input type="button" id="btn_SaveCityId" class="button-1 register-button" value="OK">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-search" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+						<h4 class="modal-title" id="myModalLabel"> Search </h4>
+					</div>
+					<div style="text-align:center;padding:10px 0;">
+						<div class="search-box store-search-box mobile search-box-mobile">
+							<form action="/search" id="small-search-box-form-mobile" method="get" novalidate="novalidate"> <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+								<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms-mobile" autocomplete="off" name="q" placeholder="Search store">
+								<input type="submit" class="button-1 search-box-button" value="Search">
+							</form>
+							<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+							<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="menu-set" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+					</div>
+					<div class="modal-body" style="padding-top:0">
+						<div class="header-upper mobile">
+							<div class="header-selectors-wrapper">
+								<div class="language-selector">
+									<select id="customerlanguage" name="customerlanguage" onchange="setLocation(this.value);">
+										<option value="/changelanguage/8?returnurl=%2fnews">es-PE</option>
+										<option value="/changelanguage/9?returnurl=%2fnews"> español(España)</option>
+										<option selected="selected" value="/changelanguage/1?returnurl=%2fnews">English</option>
+										<option value="/changelanguage/2?returnurl=%2fnews">简体中文</option>
+										<option value="/changelanguage/4?returnurl=%2fnews">русский</option>
+									</select>
+								</div>
+							</div>
+							<div class="header-links-wrapper">
+								<div class="header-links">
+									<ul>
+										<li>
+											<a href="/register" class="ico-register">
+												<i class="iconfont icon-bussinessman"></i>Register
+											</a>
+										</li>
+										<li>
+											<a href="/login" class="ico-login">
+												<i class="iconfont icon-account"></i>Log in
+											</a>
+										</li>
+										<li>
+											<a href="/wishlist" class="ico-wishlist">
+												<i class="iconfont icon-favorite"></i>
+												<span class="wishlist-label">Wishlist</span>
+												<span class="wishlist-qty">(0)</span>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="master-wrapper-page">
+			<div class="header">
+				<!--Topmenu begin-->
+				<div class="header-upper">
+					<div class="header-selectors-wrapper">
+						<div class="language-selector">
+							<select id="customerlanguage" name="customerlanguage" onchange="setLocation(this.value);">
+								<option value="/changelanguage/5?returnurl=%2fplatinum-kit">Deutsch</option>
+								<option value="/changelanguage/7?returnurl=%2fplatinum-kit">عربي/عربى</option>
+								<option selected="selected" value="/changelanguage/1?returnurl=%2fplatinum-kit">English</option>
+								<option value="/changelanguage/2?returnurl=%2fplatinum-kit">简体中文</option>
+								<option value="/changelanguage/4?returnurl=%2fplatinum-kit">русский</option>
+							</select>
+						</div>
+						<div class="peisong">
+							<i class="iconfont icon-truck" title="Delivery"></i>
+							<!--<span>  Delivery：</span>-->
+							<div class="textAddress">
+								<div title="United States>AE (Armed Forces Europe)>This is a test for a long name city">This is a test for a long name city</div><b></b></div>
+						</div>
+					</div>
+					<div class="header-links-wrapper">
+						<div class="header-links">
+							<ul>
+								<li>
+									<a href="注册.html"><i class="iconfont icon-bussinessman"></i>Register</a>
+								</li>
+								<li>
+									<a href="登录.html"><i class="iconfont icon-account"></i>Log in</a>
+								</li>
+								<li>
+									<a href="收藏.html"> <i class="iconfont icon-favorite"></i> <span class="wishlist-label">Wishlist</span> <span class="wishlist-qty">(0)</span> </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--topmenu end-->
+
+				<!--logo和配送地址-->
+				<div class="header-lower">
+					<div class="header-logo">
+						<a href="index.html"> <img title="" alt="Tiens Store" src="Content/images/logo.png"> </a>
+					</div>
+					<div class="search-box store-search-box">
+						<form action="/search" id="small-search-box-form" method="get" novalidate="novalidate">
+							<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+							<input type="text" class="search-box-text ui-autocomplete-input" id="small-searchterms" autocomplete="off" name="q" placeholder="Search store">
+							<input type="submit" class="button-1 search-box-button" value="Search">
+						</form>
+						<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"> </ul>
+					</div>
+					<div class="peisong mobile">
+						<i class="iconfont icon-truck" title="Delivery"></i>
+						<div class="textAddress">
+							<div id="div_homeAddress_mobile" title="Hungary>Budapest>All areas in Budapest">All areas in Budapest</div><b></b></div>
+					</div>
+				</div>
+				<!--Logo End-->
+			</div>
+			<div id="myScrollspy">
+				<div class="header-menu">
+					<ul class="top-menu">
+						<li>
+							<a href="/personal-care"> Beauty </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/time-shadow"> TIME SHADOW® Facial Care </a>
+								</li>
+								<li>
+									<a href="/time-shadow-makeup"> TIME SHADOW® Makeup </a>
+								</li>
+								<li>
+									<a href="/toner"> Personal Care </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/body-care"> Body Care </a>
+										</li>
+										<li>
+											<a href="/mouth-care"> Mouth Care </a>
+										</li>
+										<li>
+											<a href="/female-care"> Female Care </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/milk"> Milk </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/spakare"> SPAKARE </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/perfume"> Perfume </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/homecare"> Homecare </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/wellness-equipment"> Wellness Equipment </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/fashion-luxury"> Fashion luxury </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/watch"> Watch </a>
+								</li>
+								<li>
+									<a href="/scarves"> Scarves </a>
+								</li>
+								<li>
+									<a href="/swimsuit"> Swimsuit </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/bikini"> BIKINI </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/promotional-products"> Promotional Products </a>
+						</li>
+						<li>
+							<a href="/multi-track-shop"> Multi-track Shop </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/platinum-kit"> Platinum Kit </a>
+								</li>
+								<li>
+									<a href="/gold-kit"> Gold Kit </a>
+								</li>
+								<li>
+									<a href="/silver-kit"> Silver Kit </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/about-us">About Us</a>
+						</li>
+					</ul>
+					<li id="topcartlink">
+						<a href="/cart"> <i class="iconfont icon-icon" style="font-size: 24px;color: #8A8A8A;"></i> <span class="cart-label">Shopping cart</span> <span class="cart-qty">(0)</span> </a>
+					</li>
+					<div id="flyout-cart" class="flyout-cart" style="align-content:center">
+						<div class="mini-shopping-cart">
+							<div class="count">
+								There are
+								<a href="/cart">3 item(s)</a> in your cart. </div>
+							<div class="items">
+								<div class="item first">
+									<div class="picture">
+										<a href="/tianshi-zinc-capsuleseng" title="Show details for Tianshi Zinc Capsules(ENG)">
+											<img alt="Picture of Tianshi Zinc Capsules(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/default-image_70.png" title="Show details for Tianshi Zinc Capsules(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-zinc-capsuleseng">Tianshi Zinc Capsules(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 101530.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="picture">
+										<a href="/tianshi-vitality-softgelseng" title="Show details for Tianshi Vitality Softgels(ENG)">
+											<img alt="Picture of Tianshi Vitality Softgels(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000415_tianshi-vitality-softgelseng_70.jpeg" title="Show details for Tianshi Vitality Softgels(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-vitality-softgelseng">Tianshi Vitality Softgels(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 230750.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="picture">
+										<a href="/tianshi-cordyceps-capsuleseng" title="Show details for Tianshi Cordyceps Capsules(ENG)">
+											<img alt="Picture of Tianshi Cordyceps Capsules(ENG)" src="http://dev.b2c3.tiens.com/content/images/thumbs/0000300_tianshi-cordyceps-capsuleseng_70.jpeg" title="Show details for Tianshi Cordyceps Capsules(ENG)">
+										</a>
+									</div>
+									<div class="product">
+										<div class="name">
+											<a href="/tianshi-cordyceps-capsuleseng">Tianshi Cordyceps Capsules(ENG)</a>
+										</div>
+										<div class="price">Unit price: <span>PEN 2600.00</span></div>
+										<div class="quantity">Quantity: <span>1</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="totals">Total PV/BV: 370.00/308.00 </div>
+							<div class="totals">Sub-Total: <strong>PEN 334880.00</strong></div>
+							<div class="buttons">
+								<input type="button" value="Go to cart" class="button-1 cart-button" onclick="setLocation('/cart')">
+							</div>
+						</div>
+					</div>
+					<div class="nav-toggle"><span></span></div>
+					<ul class="top-menu mobile">
+						<li>
+							<a href="/personal-care"> Beauty </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/time-shadow"> TIME SHADOW® Facial Care </a>
+								</li>
+								<li>
+									<a href="/time-shadow-makeup"> TIME SHADOW® Makeup </a>
+								</li>
+								<li>
+									<a href="/toner"> Personal Care </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/body-care"> Body Care </a>
+										</li>
+										<li>
+											<a href="/mouth-care"> Mouth Care </a>
+										</li>
+										<li>
+											<a href="/female-care"> Female Care </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/milk"> Milk </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/spakare"> SPAKARE </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="/perfume"> Perfume </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/homecare"> Homecare </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/wellness-equipment"> Wellness Equipment </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/fashion-luxury"> Fashion luxury </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/watch"> Watch </a>
+								</li>
+								<li>
+									<a href="/scarves"> Scarves </a>
+								</li>
+								<li>
+									<a href="/swimsuit"> Swimsuit </a>
+									<div class="sublist-toggle"></div>
+									<ul class="sublist ">
+										<li>
+											<a href="/bikini"> BIKINI </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/promotional-products"> Promotional Products </a>
+						</li>
+						<li>
+							<a href="/multi-track-shop"> Multi-track Shop </a>
+							<div class="sublist-toggle"></div>
+							<ul class="sublist first-level">
+								<li>
+									<a href="/platinum-kit"> Platinum Kit </a>
+								</li>
+								<li>
+									<a href="/gold-kit"> Gold Kit </a>
+								</li>
+								<li>
+									<a href="/silver-kit"> Silver Kit </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/about-us">About Us</a>
+						</li>
+
+					</ul>
+					<div class="menu-set" data-toggle="modal" data-target="#menu-set"></div>
+					<div class="menu-search" data-toggle="modal" data-target="#menu-search"></div>
+					<div class="menu-shopCar"><span>12</span></div>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							$('.nav-toggle').click(function() {
+								$(this).toggleClass("active");
+								$(this).siblings('.top-menu.mobile').slideToggle('slow');
+							});
+							$('.top-menu.mobile .sublist-toggle').click(function() {
+								$(this).siblings('.sublist').slideToggle('slow');
+							});
+						});
+					</script>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$(".header-menu").affix({
+						offset: {
+							top: 65
+						}
+					});
+				});
+			</script>
+			<div class="master-wrapper-content">
+				<div class="breadcrumb">
+					<ul>
+						<li>
+							<a href="/" title="Home">Home</a> <span class="delimiter">/</span> </li>
+						<li> <strong class="current-item">Food Supplements</strong> </li>
+					</ul>
+				</div>
+			</div>
+			<div class="master-wrapper-content">
+				<!--由这里开始-->
+				<div class="master-column-wrapper">
+					<div class="center-1">
+
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h3 class="panel-title text-right"><span style="float: left;">分享邀请</span> <button type="button" class="btn btn-info btn-xs">复制链接</button> <button type="button" class="btn btn-info btn-xs">二维码</button></h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="caption">
+											<div class="media">
+												<a class="pull-left" href="#">
+													<img data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE0IiB5PSIzMiIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0O2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjY0eDY0PC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true">
+												</a>
+												<div class="media-body">
+													<h4 class="media-heading">Anne Hathaway</h4>
+													<p>编号：50000020</p>
+													<p>邮箱：<a href="">50000020@1.com</a> <button type="button" class="btn btn-info btn-xs">发送邮件</button></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="follow-us">
+											<div class="social" style=" text-align: right; ">
+												<ul class="networks" style=" border: none; margin-bottom: 0; padding: 10px 0; ">
+													<li class="facebook">
+														<a href="True" target="_blank">Facebook</a>
+													</li>
+													<li class="twitter">
+														<a href="https://twitter.com/nopCommerce" target="_blank">Twitter</a>
+													</li>
+													<li class="rss">
+														<a href="/news/rss/1">RSS</a>
+													</li>
+													<li class="youtube">
+														<a href="False" target="_blank">YouTube</a>
+													</li>
+													<li class="google-plus">
+														<a href="http://www.facebook.com/nopCommerce" target="_blank">Google+</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="page-title">
+							<h1>Welcome to Tiens</h1>
+						</div>
+						<div class="page-body">
+
+							TIENS Group Co. Ltd (hereby referred as TIENS Group), founded in 1995 by LI Jinyuan in Tianjin China, began its march into the international market in 1997. Today TIENS Group has become a multinational conglomerate, integrating industrial capital, business capital and financial capital with its scope of business covering biotechnology, health management, hotel and tourism industry, education &amp; training, e-commerce and finance investment, etc. With its business reaching over 190 countries, TIENS Group has set up branches in 110 countries &amp; regions and has established strategic alliances with top ranked enterprises from many countries. The diversified products developed by Tiens Group, such as health supplements, health care appliances, skincare products，household products, etc. are creating a high quality of life for nearly 40 million families and bringing health, happiness, beauty and affluence to the world.<br> With the development strategy of great health industry, TIENS International Health Industrial Park, sponsored by Tiens Group, cover an area of one square kilometers with total investment of RMB 7 billion Yuan. TIENS International Health Industrial Park is a comprehensive industrial park including product research &amp; development, product pilot, product manufacture, biological health study, hospitality industry, exhibition economy and so on. There is a "great health innovative technology system" basing on its R&amp;D centers and QC centers with international standard; a "great health production logistics system" relying on its modernized manufacturing shops and automatic warehouses; a "great health service system" depending on Tai Ji Sun Hospital International Health Management Center, All-Legend hotel and conference centers; a "great health education system" being backed by Tianshi College and TIANYUAN University, so as to form a chain of health industry linked up with the flow of human resources, products, finance and IT; and it is believed that TIENS International Health Industrial Park will, on this basis, grow into a "great health industry cluster" in its true sense, and lay a more solid foundation and provide even more opportunities for the development of Tiens Group.<br> Tiens Group has been adhered to its charitable philosophy of "originating from society and therefore contributing to society" and has been actively taking on corporate social responsibility. Tiens Group has donated thus far more than RMB 1.5 billion to public welfare and social charities.<br> A high quality workforce of professional talents, together with a localized and well regulated management, has contributed to the internationally strategic goals of Tiens Group. In addition, Tiens Group has an unbeatable international team of thousands of management talents in terms of research, innovation and professionalism; 35% of which hold master's degree or higher.<br> Based on the theory of "Business-oriented Thinking, Refined Management, and Refined Service", Tiens Group is currently practicing the advanced theories of "New Swap and Alternative Theory", "Consumption Makes Wealth, Operation and Consumption Makes More Wealth" as a foundation, guaranteed with the perfect operation management system and well-designed regulations, to take big strides towards World Top 500 with great confidence for the development of Chinese national industry.<br>
+							<strong>Mission Statement: </strong>To provide global consumers with quality products and opportunities of education &amp; cause, improve their life quality, and make the society harmonious.<br>
+							<strong>Tiens Brand Core:</strong> One World, One Family<br>
+							<strong>Tiens Brand Core Value:</strong> Extraordinary Innovation、Paramount Responsibility、Excellent Teamwork<br>
+							<strong>Tiens Brand Slogan:</strong> Harmony, Unity, Prosperity<br>
+							<strong>Business Philosophy:</strong> Contributing to society by restoring health to mankind.<br>
+							<strong>Enterprise spirit: </strong>Industry serve the country, Strive upward, Harmonious unity, Enthusiasm dedication.<br>
+							<strong>Quality Guideline: </strong>Parable to build human health, Milestone to realize technical innovation, Method to make sustained improvements, and Heart to satisfy consumers.<br>
+						</div>
+					</div>
+				</div>
+
+				<!--这里结束-->
+			</div>
+			<div class="footer">
+				<div class="footer-upper">
+					<div class="footer-block information">
+						<div class="title"> <strong>Information</strong> </div>
+						<ul class="list">
+							<li>
+								<a href="/sitemap">Sitemap</a>
+							</li>
+							<li>
+								<a href="/shipping-returns">Shipping &amp; returns</a>
+							</li>
+							<li>
+								<a href="/business-opportunity">Business Opportunity</a>
+							</li>
+							<li>
+								<a href="/about-us">About TIENS</a>
+							</li>
+							<li>
+								<a href="/privacy-notice">Privacy notice</a>
+							</li>
+							<li>
+								<a href="/conditions-of-use">Conditions of Use</a>
+							</li>
+							<li>
+								<a href="/contactus">Contact us</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-block customer-service">
+						<div class="title"> <strong>Customer service</strong> </div>
+						<ul class="list">
+							<li>
+								<a href="/search">Search</a>
+							</li>
+							<li>
+								<a href="/news">News</a>
+							</li>
+							<li>
+								<a href="/blog">Blog</a>
+							</li>
+							<li>
+								<a href="/digitaldownloads">Digital Downloads</a>
+							</li>
+							<li>
+								<a href="/boards">Forums</a>
+							</li>
+							<li>
+								<a href="/recentlyviewedproducts">Recently viewed products</a>
+							</li>
+							<li>
+								<a href="/newproducts">New products</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-block my-account">
+						<div class="title"> <strong>My account</strong> </div>
+						<ul class="list">
+							<li>
+								<a href="/CustomerInfo">My account</a>
+							</li>
+							<li>
+								<a href="/order/history">Orders</a>
+							</li>
+							<li>
+								<a href="/customer/addresses">Addresses</a>
+							</li>
+							<li>
+								<a href="/cart">Shopping cart</a>
+							</li>
+							<li>
+								<a href="/wishlist">Wishlist</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-block follow-us">
+						<div class="social">
+							<div class="title"><strong>Follow us</strong> </div>
+							<ul class="networks">
+								<li class="facebook">
+									<a href="True" target="_blank">Facebook</a>
+								</li>
+								<li class="twitter">
+									<a href="https://twitter.com/nopCommerce" target="_blank">Twitter</a>
+								</li>
+								<li class="rss">
+									<a href="/news/rss/1">RSS</a>
+								</li>
+								<li class="youtube">
+									<a href="False" target="_blank">YouTube</a>
+								</li>
+								<li class="google-plus">
+									<a href="http://www.facebook.com/nopCommerce" target="_blank">Google+</a>
+								</li>
+							</ul>
+						</div>
+						<div class="newsletter">
+							<div class="title"> <strong>Newsletter</strong> </div>
+							<div class="newsletter-subscribe" id="newsletter-subscribe-block">
+								<div class="newsletter-email">
+									<input class="newsletter-subscribe-text" id="newsletter-email" name="NewsletterEmail" placeholder="Enter your email here..." type="text" value="">
+									<input type="button" value="Subscribe" id="newsletter-subscribe-button" class="button-1 newsletter-subscribe-button">
+								</div>
+								<div class="newsletter-validation"> <span id="subscribe-loading-progress" style="display: none;" class="please-wait">Wait...</span> <span class="field-validation-valid" data-valmsg-for="NewsletterEmail" data-valmsg-replace="true"></span> </div>
+							</div>
+							<div class="newsletter-result" id="newsletter-result-block"></div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-lower">
+					<div class="footer-info"> <span class="footer-disclaimer"> Copyright © 2016 TIENS B2C. All rights reserved. <span> --192.168.2.130 </span> </span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+		<!-- BEGIN CORE PLUGINS -->
+		<!--[if lt IE 9]>
+<script src="content/css/global/plugins/respond.min.js"></script>
+<script src="content/css/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+		<!-- END PAGE LEVEL SCRIPTS -->
+	</body>
+
+</html>
